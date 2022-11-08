@@ -1,6 +1,6 @@
 # NCG iOS SDK
 
-NCG iOS SDK makes it easy to apply [PallyCon](https://pallycon.com)’s proprietary Netsync Content Guard DRM when developing media service apps for iOS. 
+NCG iOS SDK can enable [PallyCon](https://pallycon.com)’s proprietary Netsync Content Guard DRM when developing media service apps for iOS. 
 Please refer to the links below for detailed information.
 
 > In the trial account, you can freely test SDK products within the trial limit on the number of licenses issued. However, in order to apply the SDK to commercial services, you must apply for a plan that includes SDK usage rights when subscribing to PallyCon commercial plans.
