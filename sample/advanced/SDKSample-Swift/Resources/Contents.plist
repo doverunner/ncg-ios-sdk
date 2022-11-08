@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>IsHLS</key>
+		<true/>
+		<key>Token</key>
+		<string></string>
+		<key>ContentName</key>
+		<string>Clear HLS</string>
+		<key>ContentURL</key>
+		<string>https://contents.pallycon.com/TEST/PACKAGED_CONTENT/Non_encryption/hls/master.m3u8</string>
+	</dict>
+	<dict>
+		<key>IsHLS</key>
+		<false/>
+		<key>Token</key>
+		<string>eyJrZXlfcm90YXRpb24iOmZhbHNlLCJyZXNwb25zZV9mb3JtYXQiOiJvcmlnaW5hbCIsInVzZXJfaWQiOiJ1dGVzdCIsImRybV90eXBlIjoibmNnIiwic2l0ZV9pZCI6IkRFTU8iLCJoYXNoIjoid0lyampcL29xZFY1WnI5K09rNUI3d0hSYUo5RGQ0SFRjV2wxMHFyd2Zxajg9IiwiY2lkIjoiVGVzdFJ1bm5lciIsInBvbGljeSI6IjlXcUlXa2RocHhWR0s4UFNJWWNuSnNjdnVBOXN4Z3ViTHNkK2FqdVwvYm9tUVpQYnFJK3hhZVlmUW9jY2t2dUVmdUx0dlVMWXEwTnVoNVJaOFhGYzQ1RWxHd1dcLzY3WVhUcTJQSDJ4Z3dIR1hDalVuaUgzbDQ4NVNmcDZjbmV1bm5qdjMxeGt5VHd6VlAzdVhIUGJWNWR3PT0iLCJ0aW1lc3RhbXAiOiIyMDIxLTA0LTAyVDE0OjI5OjMyWiJ9</string>
+		<key>ContentName</key>
+		<string>sintel</string>
+		<key>ContentURL</key>
+		<string>https://contents.pallycon.com/TEST/PACKAGED_CONTENT/TEST_SIMPLE/sintel-trailer.mp4.ncg</string>
+	</dict>
+	<dict>
+		<key>IsHLS</key>
+		<true/>
+		<key>Token</key>
+		<string>eyJrZXlfcm90YXRpb24iOmZhbHNlLCJyZXNwb25zZV9mb3JtYXQiOiJvcmlnaW5hbCIsInVzZXJfaWQiOiJ1dGVzdCIsImRybV90eXBlIjoibmNnIiwic2l0ZV9pZCI6IkRFTU8iLCJoYXNoIjoiXC8rRVdFU3BiMUVYM2lVeFF1Z3NzdkRPQnBOcnFldk0wbTA0UmlxTHpYNDg9IiwiY2lkIjoiVGVzdFJ1bm5lciIsInBvbGljeSI6IjlXcUlXa2RocHhWR0s4UFNJWWNuSnNjdnVBOXN4Z3ViTHNkK2FqdVwvYm9tUVpQYnFJK3hhZVlmUW9jY2t2dUVmdUx0dlVMWXEwTnVoNVJaOFhGYzQ1RWxHd1dcLzY3WVhUcTJQSDJ4Z3dIR1hDalVuaUgzbDQ4NVNmcDZjbmV1bm5qdjMxeGt5VHd6VlAzdVhIUGJWNWR3PT0iLCJ0aW1lc3RhbXAiOiIyMDIwLTExLTE5VDE0OjEyOjIzWiJ9</string>
+		<key>ContentName</key>
+		<string>HLS NCG Content</string>
+		<key>ContentURL</key>
+		<string>https://contents.pallycon.com/TEST/PACKAGED_CONTENT/TEST_SIMPLE/hls_ncg/master.m3u8</string>
+	</dict>
+</array>
+</plist>

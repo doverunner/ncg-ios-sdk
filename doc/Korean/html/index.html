@@ -1,0 +1,781 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PallyCon NCG iOS SDK: What&#39;s New in NCG iOS</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo_inka.jpg"/></td>
+  <td id="projectalign">
+   <div id="projectname">PallyCon NCG iOS SDK<span id="projectnumber">&#160;2.10.1 (Build 20220120)</span>
+   </div>
+   <div id="projectbrief">INKA Entworks PallyCon DRM Library for iOS</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'검색','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('index.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">What's New in NCG iOS </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit; background-repeat: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit; background-repeat: inherit; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print { 
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print { 
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) { 
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) { 
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571429rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right-width: 1px; border-right-style: solid; border-right-color: rgb(221, 221, 221); background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; white-space: nowrap; background-position: inherit; background-repeat: inherit; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; outline: 0px; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: auto hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 10px; z-index: 3; overflow-y: hidden; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; border: none !important; background-position: 0px 0px !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; border-width: 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; word-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; background-position: 0px 0px; }
+.CodeMirror-wrap pre { word-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right-width: 30px; border-right-style: solid; border-right-color: transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right-style: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; inset: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right-style: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background-color: rgba(255, 255, 0, 0.4); }
+span.cm-underlined { text-decoration: underline; }
+span.cm-strikethrough { text-decoration: line-through; }
+.cm-tw-syntaxerror { color: rgb(255, 255, 255); background-color: rgb(153, 0, 0); }
+.cm-tw-deleted { text-decoration: line-through; }
+.cm-tw-header5 { font-weight: 700; }
+.cm-tw-listitem:first-child { padding-left: 10px; }
+.cm-tw-box { border-style: solid; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-color: inherit; border-top-width: 0px !important; }
+.cm-tw-underline { text-decoration: underline; }
+@media print { 
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+
+ @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}} .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
+</style><title>NCG-iOS-SDK.WhatIsNew</title>
+</head>
+<body class='typora-export'><div class='typora-export-content'>
+<div id='write'  class=''><hr /><blockquote><p><strong><span>NOTE</span></strong><span> </span></p><ul><li><span>SDK 변경, 추가, 수정한 내용을 정리한 문서이며, 자세한 사항은 가이드문서를 참고해야 합니다.</span></li><li><span>반드시 마지막에 배포된 SDK 사용해야하며, 이전 버전에서 발생한 이슈에 대해 책임을 물을 수 없습니다.</span></li><li><span>SDK 관련 문의와 SDK는 </span><a href='https://pallycon.zendesk.com'><span>INKA HelpDesk</span></a><span> 를 통해 다운로드 받으실 수 있습니다.    </span></li></ul></blockquote><hr /><p>&nbsp;</p><h3 id='version-2101'><strong><span>Version 2.10.1</span></strong></h3><blockquote><p><strong><span>What&#39;s New in Version 2.10.1</span></strong><span> </span></p></blockquote><p><font color="royalblue"><strong><code>Fixed</code></strong></font><span> </span><code>NCG Core</code><span> 버그 수정 및 안정성이 개선됩니다.</span></p><p>&nbsp;</p><h3 id='version-2100'><strong><span>Version 2.10.0</span></strong></h3><blockquote><p><strong><span>What&#39;s New in Version 2.10.0</span></strong><span> </span></p></blockquote><p><font color="orangered"><strong><code>Changed</code></strong></font><span> SDK에서 사용하는 </span><code>CURL</code><span> 라이브러리를 최신 버전(7.79.1)으로 변경됩니다.</span></p><ul><li><code>AWS-MediaConvert</code><span>나 </span><code>Wowza</code><span>로 생성한 </span><code>HLS-NCG</code><span> 콘텐츠가 오류 없이 재생됩니다.</span></li></ul><p>&nbsp;</p><h3 id='version-291'><strong><span>Version 2.9.1</span></strong></h3><blockquote><p><strong><span>What&#39;s New in Version 2.9.1</span></strong></p></blockquote><p><font color="orangered"><strong><code>Changed</code></strong></font><span> 라이브러리 헤더가 </span><code>Simulator</code><span>와 </span><code>device</code><span> 구분없이 사용하도록 변경됩니다.</span></p><ul><li><p><code>iOSNcgSDK.xcframework</code><span> 이 </span><code>Apple Silicon(M1)</code><span> 지원으로 </span><code>Simulator</code><span>와 </span><code>device</code><span> 라이브러리 헤더 이름이 달랐으나, 하나로 통합합니다.</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="objectivec"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="objectivec"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">// 변경 전</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">#import &lt;iOSNcgSDKSimulator/iOSNcgSDK.h&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">#import &lt;iOSNcgSDK/iOSNcgSDK.h&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">// 변경 후</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">#import &lt;iOSNcgSDK/iOSNcgSDK.h&gt;</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 132px;"></div><div class="CodeMirror-gutters" style="display: none; height: 132px;"></div></div></div></pre></li></ul><p>&nbsp;</p><h3 id='version-290'><strong><span>Version 2.9.0</span></strong></h3><blockquote><p><strong><span>What&#39;s New in Version 2.9.0</span></strong></p></blockquote><p><font color="darkviolet"><strong><code>Added</code></strong></font><span> NCG iOS SDK에 </span><code>XCFramework</code><span>가 추가됩니다.</span></p><ul><li><code>zip</code><span> 파일 </span><code>lib</code><span> 폴더에 </span><code>iOSNcgSDK.xcframework</code><span>에 있습니다.</span></li></ul><p>&nbsp;</p><h3 id='version-282'><strong><span>Version 2.8.2</span></strong></h3><blockquote><p><strong><span>What&#39;s New in Version 2.8.2</span></strong></p></blockquote><p><font color="royalblue"><strong><code>Fixed</code></strong></font><span> </span><code>SDK Advanced Sample</code><span> 에서 </span><code>NcgHttpRequestDelegate</code><span> 프로토콜에 대한 델리게이트가 로컬웹서버에 설정이 안되는 오류가 수정됩니다.</span></p><ul><li><span>델리게이트(</span><code>setHttpRequestDelegate:</code><span>) 설정은 반드시 </span><code>initialize:</code><span>함수를 호출한 이후여야 합니다.</span></li><li><span>그렇지 않으면 로컬웹서버에 델리게이트 설정이 안되어 프로토콜이 호출되지 않습니다.</span></li></ul><p>&nbsp;</p><h3 id='version-281'><strong><span>Version 2.8.1</span></strong></h3><blockquote><p><strong><span>What&#39;s New in Version 2.8.1</span></strong></p></blockquote><p><font color="orangered"><strong><code>Changed</code></strong></font><span> NCG 내부에서 사용하는 CURL 라이브러리가 변경됩니다.</span></p><p>&nbsp;</p><h3 id='version-280'><strong><span>Version 2.8.0</span></strong></h3><blockquote><p><strong><span>What&#39;s New in Version 2.8.0</span></strong></p></blockquote><p><font color="darkviolet"><strong><code>Added</code></strong></font><span> Http Live Streaming 컨텐츠 Key 파일 보호 로직이 추가됩니다.</span></p><ul><li><span>로컬 웹서버를 접근하여 HLS 콘텐츠 key 유출 방지하는 로직이 추가되었습니다.  </span></li></ul><p><font color="darkviolet"><strong><code>Added</code></strong></font><span> </span><code>iOSNcgSDK.framework</code><span>에 시뮬레이터용 라이브리가 추가됩니다.</span></p><ul><li><span>빌드시 문제가 있을 경우 </span><code>Frameworks, Libraries, and Embedded Content</code><span>에서 </span><strong><code>Do Not Embed</code></strong><span>로 선택하시기 바랍니다.</span></li></ul><h3 id='version-271'><strong><span>Version 2.7.1</span></strong></h3><blockquote><p><strong><span>What&#39;s New in Version 2.7.1</span></strong></p></blockquote><p><font color="darkviolet"><strong><code>Added</code></strong></font><span> </span><code>NCG SDK</code><span> 일부 함수에 로그가 추가되었고, </span><code>Ncg2Agent.setExceptionalEventDelegate:</code><span>설정과 </span><code>NcgExceptionalEventDelegate</code><span>구현으로 확인할 수 있습니다.</span></p><h3 id='version-270'><strong><span>Version 2.7.0</span></strong></h3><blockquote><p><strong><span>What&#39;s New in Version 2.7.0</span></strong></p></blockquote><p><font color="orangered"><strong><code>Changed</code></strong></font><span> </span><code>PallyConTokenInfo</code><span> 인터페이스 이름이  </span><code>Ncg2TokenInfo</code><span>로 변경됩니다.</span></p><ul><li><code>NCG iOS SDK</code><span> 와 </span><code>PallyCon FPS SDK</code><span>를 한 프로젝트에서 같이 사용할 때, </span><code>PallyConTokenInfo</code><span> 이름이 동일하여 컴파일 오류가 발생합니다. </span></li><li><span>이를 피하기 위해 </span><code>NCG iOS SDK</code><span>는 인터페이스 이름을 </span><code>Ncg2TokenInfo</code><span>로 변경합니다.</span></li></ul><p><font color="orangered"><strong><code>Changed</code></strong></font><span> </span><code>iOSNcgSDK.framework</code><span>에서 시뮬레이터용 라이브리가 제거됩니다.</span></p><ul><li><code>framework</code><span> 에 시뮬레이터용 라이브러리가 포함된 경우 빌드 에러가 발생하여 제거합니다(Xcode 12.4).</span></li></ul><h3 id='versio-n-260'><strong><span>Versio n 2.6.0</span></strong></h3><blockquote><p><strong><span>What&#39;s New in Version 2.6.0</span></strong></p></blockquote><p><font color="darkviolet"><strong><code>Added</code></strong></font><span> </span><code>getTokenInfo()</code><span> 함수가 추가됩니다.</span></p><ul><li><code>getTokenInfo()</code><span> 함수를 통해 주어진 </span><code>Token</code><span> 정보를 확인 할 수 있습니다.</span></li></ul><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="objectivec"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="objectivec"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span>(<span class="cm-variable">PallyConTokenInfo</span><span class="cm-operator">*</span>) <span class="cm-variable">getTokenInfo</span>:(<span class="cm-variable">NSString</span><span class="cm-operator">*</span>)<span class="cm-variable">token</span> <span class="cm-variable">error</span>:(<span class="cm-variable">NSError</span><span class="cm-operator">**</span>)<span class="cm-variable">error</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><p><font color="green"><strong><code>Update</code></strong></font><span> 샘플이 </span><code>Token</code><span>으로 라이선스를 획득하도록  업데이트 됩니다.</span></p><h3 id='version-252'><strong><span>Version 2.5.2</span></strong></h3><blockquote><p><strong><span>What&#39;s New in Version 2.5.2</span></strong></p></blockquote><p><code><font color="darkviolet"><span>Added</span></font></code><span> </span><code>Acquire URL</code><span> 지정 할 수 있는 </span><code>Token</code><span> 라이선스  획득 API 추가</span></p><ul><li><code>Token</code><span> 으로 라이선스 획득 시 </span><code>Acquire URL</code><span>을 지정할 수 있는 API 가 추가됩니다.</span></li></ul><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="objectivec"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="objectivec"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span>(<span class="cm-keyword">BOOL</span>) <span class="cm-variable">acquireLicenseByToken</span>:(<span class="cm-variable">NSString</span><span class="cm-operator">*</span>)<span class="cm-variable">token</span> </span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-variable">acquisitionUrl</span>:(<span class="cm-variable">NSString</span><span class="cm-operator">*</span>)<span class="cm-variable">acquisitionUrl</span> </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-variable">isTemporary</span>:(<span class="cm-keyword">BOOL</span>)<span class="cm-variable">isTemporary</span> </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-variable">error</span>:(<span class="cm-variable">NSError</span><span class="cm-operator">**</span>)<span class="cm-variable">error</span>;</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 88px;"></div><div class="CodeMirror-gutters" style="display: none; height: 88px;"></div></div></div></pre><h3 id='version-251'><strong><span>Version 2.5.1</span></strong><span> </span></h3><blockquote><p><strong><span>What&#39;s New in Version 2.5.1</span></strong></p></blockquote><p><code><font color="orangered"><span>Changed</span></font></code><span> 변경된 </span><code>NCG Core</code><span>가 반영됩니다.</span></p><ul><li><code>NCG Core</code><span> 에 m3u8 파일에서 </span><code>EXT-X-MAP</code><span>에 있는 URI 추출하는 함수가 추가되어 NCG SDK에 반영됩니다.</span></li></ul><h3 id='version-250'><strong><span>Version 2.5.0</span></strong><span> </span></h3><blockquote><p><strong><span>What&#39;s New in Version 2.5.0</span></strong></p></blockquote><p><code><font color="royalblue"><span>Fixed</span></font></code><span> 로컬 웹서버에서 크래시 발생을 제거했습니다.</span></p><ul><li><span>로컬 웹서버에서 발생하는 크래시를 제거하여 안정적으로 SDK를 사용할 수 있습니다.</span></li></ul><h3 id='version-243'><strong><span>Version 2.4.3</span></strong><span> </span></h3><blockquote><p><strong><span>What&#39;s New in Version 2.4.3</span></strong></p></blockquote><p><code><font color="royalblue"><span>Fixed</span></font></code><span> 다운로드된 컨텐츠 경로에 특정 문자 포함 시 버그 수정</span></p><ul><li><span>다운로드된 컨텐츠 경로에 특정 문자가 포함될 경우 스트리밍으로 동작하는 버그를 수정했습니다.</span></li><li><span>수정된 함수는 </span><code>isNcgContent:</code><span> </span><code>getNcg2HeaderInfo:</code><span> 입니다.</span></li></ul><h3 id='version-242'><strong><span>Version 2.4.2</span></strong><span> </span></h3><blockquote><p><strong><span>What&#39;s New in Version 2.4.2</span></strong></p></blockquote><p><code><font color="darkviolet"><span>Added</span></font></code><span> Token 라이선스  획득 API 추가 </span></p><ul><li><span>Token으로 라이선스 획득하는 API를 추가했습니다(acquireLicenseByToken)</span></li><li><span>기존 API는 입력할 파라메터을 알고 있어야 하지만, 추가된 API는 Token에서 정보를 추출하여 라이선스를 획득합니다. </span></li></ul><h3 id='version-241'><strong><span>Version 2.4.1</span></strong><span> </span></h3><blockquote><p><strong><span>What&#39;s New in Version 2.4.1</span></strong></p></blockquote><p><code><font color="orangered"><span>Changed</span></font></code><span> RODB(License) 파일 변조 대응 처리</span></p><ul><li><span>RODB 파일이 변조되었을 경우 SDK 내부에서 RODB 파일 삭제 후 재생성하도록 수정되었습니다. </span></li></ul><h3 id='version-24'><strong><span>Version 2.4</span></strong><span> </span></h3><blockquote><p><strong><span>What&#39;s New in Version 2.4</span></strong></p></blockquote><p><code><font color="darkviolet"><span>Added</span></font></code><span> Simple 샘플 추가</span></p><ul><li><span>SDK Simple 샘플이 추가되었습니다. 간단하게 SDK 적용 방법을 살펴 볼수 있습니다.</span></li></ul><p><code><font color="orangered"><span>Changed</span></font></code><span> Xcode 10 C++ 라이브러리 이름 변경</span></p><ul><li><span>Xcode 10 부터 C++ 라이브러리 이름이 </span><code>libstdc++</code><span> 에서 </span><code>libc++</code><span> 로 변경되었습니다.</span></li><li><span>SDK 사용 시 Xcode 버전에 따라 C++ 라이브러리를 넣어 주시기 바랍니다. </span></li></ul><p><code><font color="royalblue"><span>Fixed</span></font></code><span> Secure Time 버그 수정</span></p><ul><li><span>Secure Time 버그가 발견되어 SDK 내부 코드가 수정되었습니다.</span></li></ul><h3 id='version-23'><strong><span>Version 2.3</span></strong><span> </span></h3><blockquote><p><strong><span>What&#39;s New in Version 2.3</span></strong></p></blockquote><p><code><font color="darkviolet"><span>Added</span></font></code><span> NCG HLS LIVE API 추가</span></p><ul><li><span>NCG HLS LIVE 컨텐츠가 재생 되도록 아래 API가 추가되었습니다.</span></li></ul><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="objectivec"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="objectivec"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span> (<span class="cm-variable">NSString</span><span class="cm-operator">*</span>) <span class="cm-variable">addHttpLiveStreamUrlForPlayback</span>:(<span class="cm-variable">NSString</span><span class="cm-operator">*</span>)<span class="cm-variable">url</span> <span class="cm-variable">isLiveHLS</span>:(<span class="cm-keyword">BOOL</span>)<span class="cm-variable">isLiveHLS</span> <span class="cm-variable">error</span>:(<span class="cm-variable">NSError</span><span class="cm-operator">**</span>)<span class="cm-variable">error</span>;</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><p><code><font color="orangered"><span>Changed</span></font></code><span> NCG HLS API 파라메터 추가</span></p><ul><li><span>NCG HLS LIVE 컨텐츠가 재생되도록 아래 API 파라메터(</span><font color="red"><span>isLiveHLS:(BOOL)isLiveHLS</span></font><span>)가 추가되었습니다.</span></li><li><font color="red"><span>아래 API를 사용하는 앱은 반드시 변경된 API를 반영해야 합니다.</span></font></li></ul><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="objectivec"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="objectivec"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span> (<span class="cm-variable">NSString</span><span class="cm-operator">*</span>) <span class="cm-variable">addHttpLiveStreamUrlForPlayback</span>:(<span class="cm-variable">NSString</span><span class="cm-operator">*</span>)<span class="cm-variable">url</span> <span class="cm-variable">isLiveHLS</span>:(<span class="cm-keyword">BOOL</span>)<span class="cm-variable">isLiveHLS</span> <span class="cm-variable">contentId</span>:(<span class="cm-variable">NSString</span><span class="cm-operator">*</span>)<span class="cm-variable">contentId</span> <span class="cm-variable">siteId</span>:(<span class="cm-variable">NSString</span><span class="cm-operator">*</span>)<span class="cm-variable">siteId</span> <span class="cm-variable">error</span>:(<span class="cm-variable">NSError</span><span class="cm-operator">**</span>)<span class="cm-variable">error</span>;</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 44px;"></div><div class="CodeMirror-gutters" style="display: none; height: 44px;"></div></div></div></pre><h3 id='version-22'><strong><span>Version 2.2</span></strong><span> </span></h3><blockquote><p><strong><span>What&#39;s New in Version 2.2</span></strong></p></blockquote><p><code><font color="darkviolet"><span>Added</span></font></code><span> Swift 샘플 프로젝트 추가</span></p><ul><li><span>NCG SDK를 Swift에서 사용하는 방법과 샘플 프로젝트가 추가되었습니다.</span></li></ul><h3 id='version-211'><strong><span>Version 2.1.1</span></strong><span> </span></h3><blockquote><p><strong><span>What&#39;s New in Version 2.1.1</span></strong></p></blockquote><p><code><font color="darkviolet"><span>Added</span></font></code><span> HLS 콘텐츠 Key 추출 시 delegate 추가</span></p><ul><li><span>HLS 콘텐츠에서 Key 추출 시 외부 Http 통신을 사용할 수 있도록 delegate 추가 되었습니다.</span></li></ul><h3 id='version-21'><strong><span>Version 2.1</span></strong><span> </span></h3><blockquote><p><strong><span>What&#39;s New in Version 2.1</span></strong></p></blockquote><p><code><font color="darkviolet"><span>Added</span></font></code><span> 토큰을 이용한 라이선스 획득 </span></p><ul><li><span>발급된 토큰을 이용한 라이선스를 획득할 수 있는 기능 추가되었습니다.</span></li></ul><p><code><font color="royalblue"><span>Fixed</span></font></code><span> SKB library changes</span></p><ul><li><span>SDK에 안정된 SKB 라이브러리로 변경  </span></li></ul><h3 id='version-20'><strong><span>Version 2.0</span></strong><span> </span></h3><blockquote><p><strong><span>What&#39;s New in Version 2.0</span></strong></p></blockquote><p><code><font color="royalblue"><span>Fixed</span></font></code><span> HLS URL parsing fix</span></p><ul><li><span>HLS URL에 </span><code>\r</code><span> 포함 시 제거하도록 수정하였습니다.</span></li></ul><p><code><font color="orangered"><span>Changed</span></font></code><span> SDK 버전 정보 변경</span></p><ul><li><span>안드로이드 버전 정보와 일치시켰습니다.</span></li></ul><h3 id='version-12020170406'><strong><span>Version 1.2.0.20170406</span></strong><span> </span></h3><blockquote><p><strong><span>What&#39;s New in Version 1.2.0</span></strong></p></blockquote><p><code><font color="orangered"><span>Changed</span></font></code><span> NCG Contents ID Extended</span></p><ul><li><span>NCG Contents ID Extented (32 -&gt; 200byte)</span></li></ul><blockquote><p><span>NOTE: </span></p><ul><li><span>확장된 Content ID를 사용하려면 확장된 Contents ID로 암호화해주는 패키저가 필요합니다.</span></li><li><span>해당 패키저는 </span><a href='http://help.netsync.co.kr/'><span>INKA HelpDesk</span></a><span> 로 문의 주시기 바랍니다.</span></li></ul></blockquote><h3 id='version-11020161117-released-2016-12-14'><strong><span>Version 1.1.0.20161117</span></strong><span> (released 2016-12-14)</span></h3><blockquote><p><strong><span>What&#39;s New in Version 1.1.0</span></strong></p></blockquote><p><code><font color="darkviolet"><span>Added</span></font></code><span> 영문 SDK  문서 추가</span></p><ul><li><span>SDK 개발 가이드 문서 영문 추가되었습니다.</span></li></ul><p><code><font color="royalblue"><span>Fixed</span></font></code><span> </span><font color="#0088CF"><span>External Display(HDMI &amp; Mirroring)</span></font><span> 버그 수정</span></p><ul><li><span>외부출력이 제한된 컨텐츠에서 재생 중 HDMI 및 Mirroring 연결 시 외부출력되는 버그 수정  </span></li></ul><h3 id='version-11020161018-released-2016-10-18'><strong><span>Version 1.1.0.20161018</span></strong><span> (released 2016-10-18)</span></h3><blockquote><p><strong><span>What&#39;s New in Version 1.1.0</span></strong></p></blockquote><p><code><font color="orangered"><span>Changed</span></font></code><span> Enable </span><a href='https://developer.apple.com/library/tvos/documentation/IDEs/Conceptual/AppDistributionGuide/AppThinning/AppThinning.html#//apple_ref/doc/uid/TP40012582-CH35-SW2' target='_blank'><span>Bitcode</span></a></p><ul><li><span>Bitcode를 지원하도록 배포했으나, 써드파티라이브러리에서 Bitcode 지원에 오류가 있어 Bitcode 지원이 안됩니다.</span></li><li><span>App이 Bitcode 지원을 원하도록 되어있다면 Xcode </span><code>Build Options</code><span>에서 </span><code>Enable Bitcode</code><span>를 </span><code>No</code><span> 로 변경하시기 바랍니다.</span></li></ul><p><code><font color="orangered"><span>Changed</span></font></code><span> HTTP 통신 curl 라이브러리로 교체</span></p><ul><li><span>IPv6 대응에 따라 HTTP 통신을 curl 라이브러리로 변경하였습니다.</span></li><li><span>crul 라이브러리 버전은 v7.50.1 입니다.</span></li></ul><p><code><font color="darkviolet"><span>Added</span></font></code><span> curl 라이브러리 사용에 따른 </span><code>libz.tbd</code><span> 라이브러리 프로젝트 추가 필요</span></p><ul><li><span>HTTP 통신을 위한 curl 라이브러리는 </span><code>libz.tbd</code><span> 라이브러리를 필요로 합니다.</span></li><li><code>Link Binary With Libraries</code><span>에서 </span><code>libz.tbd</code><span>추가하여 빌드하시기 바랍니다.</span></li></ul><p><code><font color="Navy"><span>Info</span></font></code><span> iOS8 이상 시뮬레이터에서 SDK  동작 안됨</span></p><ul><li><span>내부 라이브러리가 iOS8 이상을 지원하지 않아 부득히하게 iOS8 이상에서는 시뮬레이터에서 테스트가 불가합니다.</span></li><li><span>추후 내부 라이브러라가 업데이트되면 변경하여 배포됩니다.</span></li><li><span>시뮬레이터가 아닌 디바이스에서는 정상 동작하므로 실제 디바이스에서 테스트하시기 바랍니다. </span></li></ul><p><code><font color="darkslategray"><span>Deprecated</span></font></code><span> </span><del><span>-(void) setMultipleConnectionDeny:(BOOL)enabled</span></del><span> 제거</span></p><ul><li><span>iOS 기본 플레이어는 로컬 서버에 데이터를 요청할 때 멀티로 요청하므로 Multiple Connection을 제한하면 재생이 안되는 문제가 발생하여 이 API를 제거합니다.</span></li></ul><hr /><h3 id='version-10320160708-released-2016-07-08'><strong><span>Version 1.0.3.20160708</span></strong><span> (released 2016-07-08)</span></h3><blockquote><p><strong><span>What&#39;s New in Version 1.0.3.20160217</span></strong></p></blockquote><p><code><font color="orangered"><span>Changed</span></font></code><span> OpenSSL 1.0.2a -&gt; 1.0.2h</span></p><ul><li><span>SDK 내부 사용 라이브러리 OpenSSL 버전이 변경되었습니다.</span></li></ul><hr /><h3 id='version-10220160317-released-2016-03-17'><strong><span>Version 1.0.2.20160317</span></strong><span> (released 2016-03-17)</span></h3><blockquote><p><strong><span>What&#39;s New in Version 1.0.2.20160217</span></strong></p></blockquote><p><code><font color="orangered"><span>Changed</span></font></code><span> iOS 9.X Support</span></p><ul><li><span>SDK 내부 사용 라이브러리 중 iOS 9.X 시뮬레이터용 라이브러리가 포함되지 않아 이 버전에서 시뮬레이터는 동작하지 않았습니다.</span></li><li><span>내부 사용 라이브러리에 iOS 9.X 시뮬레이터용 라이브러리를 포함하여 다시 배포합니다.</span></li></ul><p><code><font color="orangered"><span>Changed</span></font></code><span> Enable </span><a href='https://developer.apple.com/library/tvos/documentation/IDEs/Conceptual/AppDistributionGuide/AppThinning/AppThinning.html#//apple_ref/doc/uid/TP40012582-CH35-SW2' target='_blank'><span>Bitcode</span></a></p><ul><li><span>Bitcode를 지원하도록 활성화하여 배포합니다.</span></li><li><span>App이 Bitcode 지원을 원한다면 Xcode </span><code>Build Options</code><span>에서 </span><code>Enable Bitcode</code><span>를 </span><code>Yes</code><span> 로 설정합니다. </span></li></ul><hr /><h3 id='version-10120160118-released-2016-01-18'><span>Version 1.0.1.20160118 (released 2016-01-18)</span></h3><blockquote><p><strong><span>What&#39;s New in Version 1.0.1.20160114</span></strong></p></blockquote><p><code><font color="royalblue"><span>Fixed</span></font></code><span> </span><font color="#0088CF"><span>[Ncg2Agent getNcg2HeaderInfo]</span></font><span> 버그 수정</span></p><ul><li><code>getNcg2HeaderInfo:</code><span> 함수에서 open한 파일에 대해 close가 없어 여러번 함수 호출 시 런타임 에러가 발생합니다.</span>
+<span>open한 파일을 사용 후 close 하도록 수정하였습니다.</span></li><li><span>직접 호출하지 않더라도 파일 검사, 라이선스 확인 및 획득 등에서 호출되어 앱 동작에 문제가 되므로 배포된 버전을 적용해야 합니다.</span></li></ul><p><code><font color="royalblue"><span>Fixed</span></font></code><span> </span><font color="#0088CF"><span>External Display(AirPlay)</span></font><span> 버그 수정</span></p><ul><li><span>이전버전에서 AirPlay 경우 라이선스의 External Display 설정 다르게 동작하는 버그가 있었습니다.</span></li><li><span>라이선스에 External Display 설정과 맞게 동작하도록 버그를 수정했습니다.</span></li></ul><hr /><h3 id='version-10120160112-released-2016-01-12'><strong><span>Version 1.0.1.20160112</span></strong><span> (released 2016-01-12)</span></h3><blockquote><p><strong><span>What&#39;s New in Version 1.0.1.20160112</span></strong></p></blockquote><p><code><font color="orangered"><span>Changed</span></font></code><span> iOS SDK 인터페이스 변경</span></p><ul><li><span>인터페이스를 단순화하고 SDK 사용성을 고려하여 변경하였습니다.</span></li><li><font color="red"><span> </span><strong><span>기존 iOS SDK와 호환되지 않습니다.</span></strong></font></li><li><span>구현 가이드 문서와 샘플 프로젝트를 참고하여 구현해야 합니다.</span></li></ul><blockquote><p><strong><span>NOTE</span></strong></p><ul><li><span>이전 버전(구) iOS SDK와는 인터페이스가 전혀 맞지 않아 신규 SDK 사용 시 새롭게 개발이 필요합니다.</span></li><li><span>이전 버전은 2016년 12월 말까지 유지 관리될 예정이며, 유지되는 일정은 변경될 수 있습니다. </span></li><li><span>xCode 빌드 설정 중 </span><code>bitcode</code><span>는 지원하지 않습니다.</span></li></ul></blockquote><hr /></div></div>
+</body>
+</html>  <p ><a class="el" href="implementation.html">Implementation Guides</a> </p>
+</div></div><!-- PageDoc -->
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">생성시간 : 목 1월 20 2022 02:35:29, 프로젝트명 : PallyCon NCG iOS SDK, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+</body>
+</html>

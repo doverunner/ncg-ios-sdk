@@ -1,0 +1,6 @@
+framework module iOSNcgSDK {
+  umbrella header "iOSNcgSDK.h"
+
+  export *
+  module * { export * }
+}
