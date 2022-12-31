@@ -3,6 +3,7 @@ var hierarchy =
     [ "NSObject", null, [
       [ "Ncg2Agent", "interface_ncg2_agent.html", null ],
       [ "Ncg2File", "interface_ncg2_file.html", null ],
+      [ "Ncg2FileZip", "interface_ncg2_file_zip.html", null ],
       [ "Ncg2HeaderInformation", "interface_ncg2_header_information.html", null ],
       [ "Ncg2LicenseInformation", "interface_ncg2_license_information.html", null ],
       [ "Ncg2LicenseOutputProtectionPermission", "interface_ncg2_license_output_protection_permission.html", null ],

@@ -244,6 +244,62 @@
             </Subnodes>
            </Node>
            <Node>
+            <Name>Ncg2FileZip</Name>
+            <Path>interface_ncg2_file_zip.html</Path>
+          <Subnodes>
+             <Node>
+              <Name>init:</Name>
+              <Path>interface_ncg2_file_zip.html</Path>
+              <Anchor>ae074a0f94eb49a1960612b0404513130</Anchor>
+             </Node>
+             <Node>
+              <Name>ncgZipPrepare:error:</Name>
+              <Path>interface_ncg2_file_zip.html</Path>
+              <Anchor>a2b45b39e535457ce2bb1ba1f210e181d</Anchor>
+             </Node>
+             <Node>
+              <Name>ncgZipGetEntries</Name>
+              <Path>interface_ncg2_file_zip.html</Path>
+              <Anchor>a88bfa9701b2db581db69de32855a03aa</Anchor>
+             </Node>
+             <Node>
+              <Name>ncgZipOpenEntry:error:</Name>
+              <Path>interface_ncg2_file_zip.html</Path>
+              <Anchor>ad1430cd6071c9dd563339b83e56f0e58</Anchor>
+             </Node>
+             <Node>
+              <Name>ncgZipRead:bufferSize:</Name>
+              <Path>interface_ncg2_file_zip.html</Path>
+              <Anchor>a3b3c96065ca6864157a9a4d3b7efe0b0</Anchor>
+             </Node>
+             <Node>
+              <Name>ncgZipSeek:method:</Name>
+              <Path>interface_ncg2_file_zip.html</Path>
+              <Anchor>a61bd28a1d2f1a845c0ff6559c392613d</Anchor>
+             </Node>
+             <Node>
+              <Name>ncgZipEof</Name>
+              <Path>interface_ncg2_file_zip.html</Path>
+              <Anchor>ac403207b14ef7cfeb5f92e5e4c34658e</Anchor>
+             </Node>
+             <Node>
+              <Name>ncgZipTell</Name>
+              <Path>interface_ncg2_file_zip.html</Path>
+              <Anchor>a2ff50befe4c8b37e7e29c64d265fa150</Anchor>
+             </Node>
+             <Node>
+              <Name>ncgZipClose</Name>
+              <Path>interface_ncg2_file_zip.html</Path>
+              <Anchor>aa3db60caee6f3aebb11481fbd2ba9891</Anchor>
+             </Node>
+             <Node>
+              <Name>ncgZipFileSize</Name>
+              <Path>interface_ncg2_file_zip.html</Path>
+              <Anchor>aa71c4f6cee66ed11315b3d7d091b25ab</Anchor>
+             </Node>
+            </Subnodes>
+           </Node>
+           <Node>
             <Name>Ncg2HeaderInformation</Name>
             <Path>interface_ncg2_header_information.html</Path>
           <Subnodes>
@@ -487,6 +543,10 @@
              <Node>
               <Name>Ncg2File</Name>
               <Path>interface_ncg2_file.html</Path>
+             </Node>
+             <Node>
+              <Name>Ncg2FileZip</Name>
+              <Path>interface_ncg2_file_zip.html</Path>
              </Node>
              <Node>
               <Name>Ncg2HeaderInformation</Name>

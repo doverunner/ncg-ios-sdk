@@ -2,6 +2,7 @@ var annotated_dup =
 [
     [ "Ncg2Agent", "interface_ncg2_agent.html", "interface_ncg2_agent" ],
     [ "Ncg2File", "interface_ncg2_file.html", "interface_ncg2_file" ],
+    [ "Ncg2FileZip", "interface_ncg2_file_zip.html", "interface_ncg2_file_zip" ],
     [ "Ncg2HeaderInformation", "interface_ncg2_header_information.html", "interface_ncg2_header_information" ],
     [ "Ncg2LicenseInformation", "interface_ncg2_license_information.html", "interface_ncg2_license_information" ],
     [ "Ncg2LicenseOutputProtectionPermission", "interface_ncg2_license_output_protection_permission.html", null ],

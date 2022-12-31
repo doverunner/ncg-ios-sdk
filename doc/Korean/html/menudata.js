@@ -23,14 +23,14 @@
  @licend  The above is the entire license notice for the JavaScript code in this file
 */
 var menudata={children:[
-{text:"메인 페이지",url:"index.html"},
-{text:"관련된 페이지",url:"pages.html"},
-{text:"클래스",url:"annotated.html",children:[
-{text:"클래스 목록",url:"annotated.html"},
-{text:"클래스 색인",url:"classes.html"},
-{text:"클래스 계통도",url:"hierarchy.html"},
-{text:"클래스 멤버",url:"functions.html",children:[
-{text:"모두",url:"functions.html",children:[
+{text:"Main Page",url:"index.html"},
+{text:"Related Pages",url:"pages.html"},
+{text:"Classes",url:"annotated.html",children:[
+{text:"Class List",url:"annotated.html"},
+{text:"Class Index",url:"classes.html"},
+{text:"Class Hierarchy",url:"hierarchy.html"},
+{text:"Class Members",url:"functions.html",children:[
+{text:"All",url:"functions.html",children:[
 {text:"a",url:"functions.html#index_a"},
 {text:"c",url:"functions.html#index_c"},
 {text:"d",url:"functions.html#index_d"},
@@ -38,12 +38,13 @@ var menudata={children:[
 {text:"g",url:"functions.html#index_g"},
 {text:"h",url:"functions.html#index_h"},
 {text:"i",url:"functions.html#index_i"},
+{text:"n",url:"functions.html#index_n"},
 {text:"o",url:"functions.html#index_o"},
 {text:"p",url:"functions.html#index_p"},
 {text:"r",url:"functions.html#index_r"},
 {text:"s",url:"functions.html#index_s"},
 {text:"u",url:"functions.html#index_u"}]},
-{text:"함수",url:"functions_func.html",children:[
+{text:"Functions",url:"functions_func.html",children:[
 {text:"a",url:"functions_func.html#index_a"},
 {text:"c",url:"functions_func.html#index_c"},
 {text:"d",url:"functions_func.html#index_d"},
@@ -51,6 +52,7 @@ var menudata={children:[
 {text:"g",url:"functions_func.html#index_g"},
 {text:"h",url:"functions_func.html#index_h"},
 {text:"i",url:"functions_func.html#index_i"},
+{text:"n",url:"functions_func.html#index_n"},
 {text:"o",url:"functions_func.html#index_o"},
 {text:"p",url:"functions_func.html#index_p"},
 {text:"r",url:"functions_func.html#index_r"},
