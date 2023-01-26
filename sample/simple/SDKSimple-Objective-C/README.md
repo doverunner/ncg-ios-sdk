@@ -6,7 +6,7 @@ This sample demonstrates how to use the `iOSNcgSDK` framework to play .mp4(NCG c
 
 ## Using the Sample
 
-- Build and run the sample on an actual device running iOS 9.0 or later using Xcode.
+- Build and run the sample on an actual device running iOS 11.0 or later using Xcode.
 
 - With `iOSNcgSDK` framework, you can know about NCG(MP4) content streaming playback.
 
@@ -47,30 +47,11 @@ This sample demonstrates how to use the `iOSNcgSDK` framework to play .mp4(NCG c
 
 
 
-### Bitcode not support
-
-- `PallyConFPSSDK` does not support `Bitcode`.
-- In the Xcode project target `Build Settings` -> `Build Options` -> `Enable Bitcode` to `NO`.
-
-
-
 ## Main Files
 
 __ViewController.m__: 
 
 - Examples of NCG SDK initialization and content (MP4) license acquisition and playback are implemented.
-
-
-
-## Requirements
-
-### Build
-
-- Built in the latest Xcode build and minimum target is iOS 9
-
-### Runtime
-
-- iOS 9.0 or later
 
 
 
@@ -93,7 +74,7 @@ PallyCon Multi-DRM Service description and inquiries are available at the addres
 
 ## Using the Sample
 
-- Xcode를 사용하여 iOS 9.0 이상의 실제 디바이스에서 샘플을 빌드와 실행하십시오.
+- Xcode를 사용하여 iOS 11.0 이상의 실제 디바이스에서 샘플을 빌드와 실행하십시오.
 
 - `iOSNcgSDK` 프레임워크으로 NCG(MP4) 콘텐츠 스트리밍 재생에 대해 알 수 있습니다. 
 
@@ -133,30 +114,11 @@ PallyCon Multi-DRM Service description and inquiries are available at the addres
 
 
 
-### Bitcode not support
-
-- `PallyConFPSSDK` 는 `Bitcode`를 지원하지 않습니다.
-- Xcode 프로젝트 타겟에 `Build Settings` -> `Build Options` -> `Enable Bitcode`를 `NO`로 변경합니다.
-
-
-
 ## Main Files
 
 __ViewController.m__: 
 
 - NCG SDK 초기화와 콘텐츠(MP4)라이선스 획득과 재생 관련 예제가 구현되어 있습니다.
-
-
-
-## Requirements
-
-### Build
-
-- 최신 Xcode에서 빌드되며 최소 타겟은 iOS 9 입니다.
-
-### Runtime
-
-- iOS 9.0 or later
 
 
 
