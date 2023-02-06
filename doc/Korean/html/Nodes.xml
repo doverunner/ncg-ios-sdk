@@ -14,11 +14,11 @@
         <Path>implementation.html</Path>
        </Node>
        <Node>
-        <Name>Classes</Name>
+        <Name>클래스</Name>
         <Path>annotated.html</Path>
       <Subnodes>
          <Node>
-          <Name>Class List</Name>
+          <Name>클래스 목록</Name>
           <Path>annotated.html</Path>
         <Subnodes>
            <Node>
@@ -525,11 +525,11 @@
           </Subnodes>
          </Node>
          <Node>
-          <Name>Class Index</Name>
+          <Name>클래스 색인</Name>
           <Path>classes.html</Path>
          </Node>
          <Node>
-          <Name>Class Hierarchy</Name>
+          <Name>클래스 계통도</Name>
           <Path>hierarchy.html</Path>
         <Subnodes>
            <Node>
@@ -591,15 +591,15 @@
           </Subnodes>
          </Node>
          <Node>
-          <Name>Class Members</Name>
+          <Name>클래스 멤버</Name>
           <Path>functions.html</Path>
         <Subnodes>
            <Node>
-            <Name>All</Name>
+            <Name>모두</Name>
             <Path>functions.html</Path>
            </Node>
            <Node>
-            <Name>Functions</Name>
+            <Name>함수</Name>
             <Path>functions_func.html</Path>
            </Node>
           </Subnodes>

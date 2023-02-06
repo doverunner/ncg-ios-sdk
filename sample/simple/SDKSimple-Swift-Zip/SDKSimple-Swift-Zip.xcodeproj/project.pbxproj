@@ -14,10 +14,25 @@
 		C145B27929304D6600966FF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C145B27829304D6600966FF4 /* Assets.xcassets */; };
 		C145B27C29304D6600966FF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C145B27A29304D6600966FF4 /* LaunchScreen.storyboard */; };
 		C145B28529304DC600966FF4 /* zipNcgLorem.zip.ncg in Resources */ = {isa = PBXBuildFile; fileRef = C145B28429304DC600966FF4 /* zipNcgLorem.zip.ncg */; };
-		C145B28929304F9800966FF4 /* iOSNcgSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C145B28829304F9700966FF4 /* iOSNcgSDK.framework */; };
 		C145B28E29304FBC00966FF4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C145B28C29304FA100966FF4 /* libz.tbd */; };
 		C145B29029304FF100966FF4 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C145B28F29304FE800966FF4 /* libc++.tbd */; };
+		C1895AAD2990D9FC00D88F1E /* iOSNcgSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1895AAC2990D9FB00D88F1E /* iOSNcgSDK.xcframework */; };
+		C1895AAE2990D9FC00D88F1E /* iOSNcgSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C1895AAC2990D9FB00D88F1E /* iOSNcgSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C1895AAF2990D9FC00D88F1E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C1895AAE2990D9FC00D88F1E /* iOSNcgSDK.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C145B26C29304D6500966FF4 /* SDKSimple-Swift-Zip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SDKSimple-Swift-Zip.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,9 +44,9 @@
 		C145B27B29304D6600966FF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C145B27D29304D6600966FF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C145B28429304DC600966FF4 /* zipNcgLorem.zip.ncg */ = {isa = PBXFileReference; lastKnownFileType = file; path = zipNcgLorem.zip.ncg; sourceTree = "<group>"; };
-		C145B28829304F9700966FF4 /* iOSNcgSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iOSNcgSDK.framework; path = ../../lib/iOSNcgSDK.framework; sourceTree = "<group>"; };
 		C145B28C29304FA100966FF4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		C145B28F29304FE800966FF4 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		C1895AAC2990D9FB00D88F1E /* iOSNcgSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = iOSNcgSDK.xcframework; path = ../../../lib/iOSNcgSDK.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,8 +55,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C145B29029304FF100966FF4 /* libc++.tbd in Frameworks */,
-				C145B28929304F9800966FF4 /* iOSNcgSDK.framework in Frameworks */,
 				C145B28E29304FBC00966FF4 /* libz.tbd in Frameworks */,
+				C1895AAD2990D9FC00D88F1E /* iOSNcgSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,9 +106,9 @@
 		C145B28729304F9700966FF4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C1895AAC2990D9FB00D88F1E /* iOSNcgSDK.xcframework */,
 				C145B28F29304FE800966FF4 /* libc++.tbd */,
 				C145B28C29304FA100966FF4 /* libz.tbd */,
-				C145B28829304F9700966FF4 /* iOSNcgSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -108,6 +123,7 @@
 				C145B26829304D6500966FF4 /* Sources */,
 				C145B26929304D6500966FF4 /* Frameworks */,
 				C145B26A29304D6500966FF4 /* Resources */,
+				C1895AAF2990D9FC00D88F1E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
