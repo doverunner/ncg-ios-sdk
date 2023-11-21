@@ -508,6 +508,9 @@ extern "C" {
 
 #define    NCGERR_NOT_PREPARED_STATE                    0xF0002010
 
+#define    NCGERR_FAILED_TO_TICK_COUNT                          0xF0002011
+#define    NCGERR_FAILED_SECURE_TIME_IS_LESS_THEN_COMPILE_TIME  0xF0002012
+
 
 // 디바이스에서 라이선스를 요청하기 위해 저장된 인증서로 암호화하여 서버에 보내고 서버는 요청 정보의 디바이스 인증서를 DB에서 찾아
 // 복호화를 시도하는데 이를 실패하는 경우 7003 오류를 리턴하게 된다.

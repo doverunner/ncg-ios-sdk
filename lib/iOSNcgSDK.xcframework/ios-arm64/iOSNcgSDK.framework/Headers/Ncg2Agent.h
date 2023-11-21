@@ -8,7 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "Ncg2File.h"
-#import "Ncg2FileZip.h"
+#if TARGET_OS_SIMULATOR
+#else
+    #import "Ncg2FileZip.h"
+#endif
 #import "Ncg2Webserver.h"
 #import "Ncg2SdkCommon.h"
 
@@ -762,7 +765,10 @@
  */
 -(Ncg2File*) createNcgFile:(NSError**)error;
 
--(Ncg2FileZip*) createNcgFileZip:(NSError**)error;
+#if TARGET_OS_SIMULATOR
+#else
+    -(Ncg2FileZip*) createNcgFileZip:(NSError**)error;
+#endif
 
 /**
  * @if KOREA
