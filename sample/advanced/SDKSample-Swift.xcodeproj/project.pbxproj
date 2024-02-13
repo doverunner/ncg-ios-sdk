@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -25,7 +25,23 @@
 		88DB3CE020BD28C00012D87C /* NCGDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DB3CDF20BD28C00012D87C /* NCGDownload.swift */; };
 		88DB3CE320BD79660012D87C /* TableViewController+URLSessionDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DB3CE220BD79660012D87C /* TableViewController+URLSessionDelegates.swift */; };
 		88DC6E9620C92302006C706F /* Recharbility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DC6E9520C92302006C706F /* Recharbility.swift */; };
+		C10ED4C22B7BCE8900202E6D /* iOSNcgSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C10ED4BE2B7BCCCB00202E6D /* iOSNcgSDK.xcframework */; };
+		C10ED4C32B7BCE8900202E6D /* iOSNcgSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C10ED4BE2B7BCCCB00202E6D /* iOSNcgSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C10ED4C42B7BCE8900202E6D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C10ED4C32B7BCE8900202E6D /* iOSNcgSDK.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		882D252E20BB9B670080929C /* SDKSample-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SDKSample-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -52,6 +68,8 @@
 		88DB3CDF20BD28C00012D87C /* NCGDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCGDownload.swift; sourceTree = "<group>"; };
 		88DB3CE220BD79660012D87C /* TableViewController+URLSessionDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableViewController+URLSessionDelegates.swift"; sourceTree = "<group>"; };
 		88DC6E9520C92302006C706F /* Recharbility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recharbility.swift; sourceTree = "<group>"; };
+		C10ED4BE2B7BCCCB00202E6D /* iOSNcgSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = iOSNcgSDK.xcframework; path = ../../lib/iOSNcgSDK.xcframework; sourceTree = "<group>"; };
+		C19CCE8727F6FE8D005A085F /* iOSNcgSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iOSNcgSDK.framework; path = ../../lib/iOSNcgSDK.framework; sourceTree = "<group>"; };
 		FC6F63A1261F474700AC54AF /* Accessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accessibility.framework; path = System/Library/Frameworks/Accessibility.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -62,6 +80,7 @@
 			files = (
 				88CBAB2721749F360016970A /* libc++.tbd in Frameworks */,
 				882D253820BB9D240080929C /* libz.tbd in Frameworks */,
+				C10ED4C22B7BCE8900202E6D /* iOSNcgSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +90,8 @@
 		882D253220BB9D070080929C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C10ED4BE2B7BCCCB00202E6D /* iOSNcgSDK.xcframework */,
+				C19CCE8727F6FE8D005A085F /* iOSNcgSDK.framework */,
 				FC6F63A1261F474700AC54AF /* Accessibility.framework */,
 				88CBAB2621749F360016970A /* libc++.tbd */,
 				88CBAB24217494500016970A /* libc.tbd */,
@@ -165,6 +186,7 @@
 				8865366F20B6DA6E0013BB77 /* Sources */,
 				8865367020B6DA6E0013BB77 /* Frameworks */,
 				8865367120B6DA6E0013BB77 /* Resources */,
+				C10ED4C42B7BCE8900202E6D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -388,17 +410,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 22X77ENQ2H;
 				ENABLE_BITCODE = NO;
-				EXCLUDED_ARCHS = "";
-				FRAMEWORK_SEARCH_PATHS = "";
-				HEADER_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../lib\"";
 				INFOPLIST_FILE = "SDKSample-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "";
-				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.inka.sample.swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -419,16 +437,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 22X77ENQ2H;
 				ENABLE_BITCODE = NO;
-				EXCLUDED_ARCHS = "";
-				FRAMEWORK_SEARCH_PATHS = "";
-				HEADER_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../lib\"";
 				INFOPLIST_FILE = "SDKSample-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inka.sample.swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

@@ -154,12 +154,11 @@ class NCGPlaybackManager: NSObject {
     func setNcgContentForPlayback(_ ncgContent: NCGContent?) {
         readyForPlayback = false
         guard ncgContent != nil else {
-            //self.ncgContent = nil
             return
         }
-  
+       
         self.ncgContent = ncgContent
-
+  
         // 1. NCG Content check
         if NCGPallyConSDKManager.sharedManager.isNcgContent(ncgContent: ncgContent!) {
             // 2. NCG Content license check And acquire license
@@ -194,6 +193,7 @@ class NCGPlaybackManager: NSObject {
                 self.ncgContent?.urlAsset = AVURLAsset(url: URL(string: (ncgContent?.localPath)!)!)
             }
         }
+        
     }
     
     @objc func addMovedToBackground() {
@@ -214,8 +214,8 @@ extension NCGPlaybackManager: WebServerDelegate {
             }
         }
     }
-
-func onError(_ errorCode: Int32, errorMessage: String!) {
+    
+    func onError(_ errorCode: Int32, errorMessage: String!) {
         print("Error : (NCGPlaybackManager) \(errorCode), \(String(describing: errorMessage))")
     }
     //

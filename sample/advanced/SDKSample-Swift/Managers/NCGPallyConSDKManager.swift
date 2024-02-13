@@ -25,7 +25,7 @@ class NCGPallyConSDKManager: NSObject {
     
     func initialize() -> Bool {
         do {
-            pallyconNCGSDK?.setExceptionalEventDelegate(self, logLevel: NCG_DEBUG)
+            pallyconNCGSDK?.setExceptionalEventDelegate(self)
             
             // The initialize() function should be called only once. Otherwise, a memory leak will occur.
             if (try pallyconNCGSDK?.initialize(OfflineSupportYes, rodbPath: nil, deviceId: nil)) != nil {
@@ -79,9 +79,9 @@ class NCGPallyConSDKManager: NSObject {
                 ncgUrl = ncgContent.url
             }
             
-            try pallyconNCGSDK?.getLicenseInfo(byToken: ncgContent.token, licenseValidation: &lv, licenseInformation: &li)
+            try pallyconNCGSDK?.getLicenseInfo(byPath: ncgUrl, licenseValidation: &lv, licenseInformation: &li)
             if lv == LicenseValidationNotExist {
-                if self.acquireLicense(ncgContent: ncgContent, token: ncgContent.token) {
+                if self.acquireLicense(ncgContent: ncgContent) {
                     li = self.contentLicenseInfo(ncgContent: ncgContent)!
                 }
             }
@@ -114,8 +114,14 @@ class NCGPallyConSDKManager: NSObject {
     func licenseCheck(ncgContent: NCGContent) -> Bool {
         do {
             var licenseValidation: LicenseValidation = LicenseValidation.init(1)
+            let ncgUrl: String?
+            if ncgContent.downloaded {
+                ncgUrl = ncgContent.localPath
+            } else {
+                ncgUrl = ncgContent.url
+            }
 
-            if (((try pallyconNCGSDK?.checkLicenseValid(byToken: ncgContent.token, result: &licenseValidation))) != nil) {
+            if ((try pallyconNCGSDK?.checkLicenseValid(byPath: ncgUrl, result: &licenseValidation)) != nil) {
                 if licenseValidation == LicenseValidationValid {
                     return true
                 } else {
@@ -136,6 +142,7 @@ class NCGPallyConSDKManager: NSObject {
                     case LicenseValidationValid: print("Have a valid license"); break
                         default: break
                     }
+                    
                     return false
                 }
             }
@@ -161,13 +168,22 @@ class NCGPallyConSDKManager: NSObject {
         
         do {
             if ncgContent.downloaded {
-                return ((((try pallyconNCGSDK?.acquireLicense(byToken: ncgContent.token, isTemporary: isTemporary)) != nil)))
+                if ncgContent.token.isEmpty {
+                    return ((((try pallyconNCGSDK?.acquireLicense(byPath: ncgContent.url, userID: "utest", orderID: "", isTemporary: isTemporary)) != nil)))
+                } else {
+                    return ((((try pallyconNCGSDK?.acquireLicense(byToken: ncgContent.token, isTemporary: isTemporary)) != nil)))
+                }
+            } else {
+                if ncgContent.token.isEmpty {
+                    return ((((try pallyconNCGSDK?.acquireLicense(byPath: ncgContent.url, userID: "utest", orderID: "", isTemporary: isTemporary)) != nil)))
+                } else {
+                    return ((try pallyconNCGSDK?.acquireLicense(byToken: ncgContent.token, isTemporary: isTemporary)) != nil)
+                }
             }
         } catch {
             print("Error : \(error)")
             return false
         }
-        return false
     }
     
     //
@@ -182,16 +198,25 @@ class NCGPallyConSDKManager: NSObject {
             }
             if ncgContent.downloaded {
                 // Downloaded Content
-                try localUrl = (pallyconNCGSDK?.getLocalWebServerInstance().addLocalFile(forUrl: ncgContent.url, token: ncgContent.token))!
+                try localUrl = (pallyconNCGSDK?.getLocalWebServerInstance().addLocalFilePath(forPlayback: ncgContent.localPath,
+                                                                                             remoteUrlForDnp: nil,
+                                                                                             fileSize: 0))!
             } else if ncgContent.url.hasSuffix("m3u8") || ncgContent.url.hasSuffix("smil") {
                 // HLS Content
-                try localUrl = (pallyconNCGSDK?.getLocalWebServerInstance().addHttpLiveStream(forUrl: ncgContent.url, token: ncgContent.token))!
+                if ncgContent.live {
+                    try localUrl = (pallyconNCGSDK?.getLocalWebServerInstance().addHttpLiveStreamUrl(forPlayback: ncgContent.url, isLiveHLS: true))!
+                } else {
+                    try localUrl = (pallyconNCGSDK?.getLocalWebServerInstance().addHttpLiveStreamUrl(forPlayback: ncgContent.url, isLiveHLS: false))!
+                }
+                //try localUrl = (pallyconNCGSDK?.getLocalWebServerInstance()?.addHttpLiveStreamUrl(forPlayback: ncgContent.url))!
             } else if ncgContent.url.hasPrefix("http") {
                 // Progressive Download Content
                 try localUrl = (pallyconNCGSDK?.getLocalWebServerInstance().addProgressiveDownloadUrl(forPlayback: ncgContent.url))!
             } else {
                 // Downloading And Play
-                try localUrl = (pallyconNCGSDK?.getLocalWebServerInstance().addLocalFile(forUrl: ncgContent.localPath, token: ncgContent.token))!
+                try localUrl = (pallyconNCGSDK?.getLocalWebServerInstance().addLocalFilePath(forPlayback: ncgContent.url,
+                                                                                             remoteUrlForDnp: remoteNcgFilePath,
+                                                                                             fileSize: fileSize))!
             }
             print("NCG Playback URL : \(localUrl)")
             return AVURLAsset(url: URL(string: localUrl)!)
@@ -205,8 +230,7 @@ class NCGPallyConSDKManager: NSObject {
     // Remove playback information after playback is completed or before playback through the local web server.
     //
     func clearPlaybackUrl() {
-        //pallyconNCGSDK?.getLocalWebServerInstance().clearVirtualPlaybackUrls()
-        pallyconNCGSDK?.getLocalWebServerInstance().stop()
+        pallyconNCGSDK?.getLocalWebServerInstance().clearVirtualPlaybackUrls()
     }
     
     func removeLicense(ncgContent: NCGContent) {
@@ -243,10 +267,6 @@ extension NCGPallyConSDKManager: NcgExceptionalEventDelegate {
     func log(_ logMessage: String!) {
         print("log [\(logMessage!)]")
     }
-    
-    func log(_ type: LogType, comment message: String!) {
-        print("message: [\(String(describing: message))]")
-    }
 }
 
 
@@ -254,47 +274,18 @@ extension NCGPallyConSDKManager: NcgHttpRequestDelegate {
     
     func handleHttpRequest(_ requestURL: String!, urlParameter parameter: String!, requestHeaders header: [AnyHashable : Any]!) -> Data! {
         
-//        var httpUrl: String?
-//        httpUrl = requestURL.replacingOccurrences(of: " ", with: "")
-        //var httpUrl = "http://112.136.244.48/drm/ncg"
-        var httpUrl = "http://112.136.244.48:8080/license_manager.jsp"
-        
+        var httpUrl: String?
+        httpUrl = requestURL.replacingOccurrences(of: " ", with: "")
         if parameter.count > 0 {
-            httpUrl = httpUrl + "?" + parameter
+            httpUrl = httpUrl! + "?" + parameter
         }
-        print("[handleHttpRequest] requestURL ---------- \(String(describing: requestURL))")
-        print("[handleHttpRequest] parameter ----------- \(String(describing: parameter)) ")
-        print("[handleHttpRequest] http + parameter ---- \(String(describing: httpUrl)) \n")
+        print("[handleHttpRequest] parameter ----------- \n \(String(describing: parameter)) \n")
+        print("[handleHttpRequest] http + parameter ---- \n \(String(describing: httpUrl)) \n")
 
-        var request = URLRequest(url: URL(string: httpUrl)!)
+        var request = URLRequest(url: URL(string: httpUrl!)!)
         let semaphore = DispatchSemaphore(value: 0)
         
-        if requestURL.hasPrefix("https://contents.pallycon.com") {
-             request = URLRequest(url: URL(string: requestURL)!)
-        }
         request.httpMethod = "GET"
-        
-        
-//        if parameter == "mode=getserverinfo" || requestURL.hasPrefix("https://contents.pallycon.com")
-//        {
-//            if parameter.count > 0 {
-//                httpUrl = httpUrl + "?" + parameter
-//            } else {
-//                httpUrl = requestURL
-//            }
-//            request = URLRequest(url: URL(string: httpUrl)!)
-//            request.httpMethod = "GET"
-//            print("[handleHttpRequest] httpUrl   -->>   \(String(describing: httpUrl)) \n")
-//            print("[handleHttpRequest] parameter -->>   \(String(describing: parameter)) \n")
-//            print("---->> GET")
-//        } else {
-//            print("[handleHttpRequest] httpUrl   -->>   \(String(describing: httpUrl)) \n")
-//            print("[handleHttpRequest] parameter -->>   \(String(describing: parameter)) \n")
-//
-//            request.httpMethod = "POST"
-//            request.httpBody = parameter.data(using: .utf8)
-//            print("---->> POST")
-//        }
         
         if let requestHeader = header as? [String : String] {
             requestHeader.forEach { (arg0) in
@@ -303,7 +294,7 @@ extension NCGPallyConSDKManager: NcgHttpRequestDelegate {
                 print("Request Header = \(key): \(value)")
             }
         }
-       
+
         var resultData: Data?
         
         let session = URLSession.shared
@@ -316,15 +307,6 @@ extension NCGPallyConSDKManager: NcgHttpRequestDelegate {
                    }
                 self.httpHeader = res.allHeaderFields as? [String : String]
             }
-            
-            let successRange = 200..<300
-            guard error == nil,
-                  let statusCode = (response as? HTTPURLResponse)?.statusCode,
-                  successRange.contains(statusCode) else {
-                print("\(String(describing: httpUrl)) Status Code : \(String(describing: (response as? HTTPURLResponse)?.statusCode))")
-                return
-            }
-            
             semaphore.signal()
         })
 

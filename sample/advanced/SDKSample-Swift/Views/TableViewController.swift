@@ -38,9 +38,8 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NCGPlaybackManager.sharedManager.delegate = self
-        
         // NCG SDK initialize(). Use it only once. Otherwise, a memory leak occurs.
+        NCGPlaybackManager.sharedManager.delegate = self
         if NCGPallyConSDKManager.sharedManager.initialize() == false {
             print("Error")
         }
@@ -52,10 +51,10 @@ class TableViewController: UITableViewController {
         
         if playerViewController != nil {
             // Local web server Playback-URL clear.
-            playerViewController?.player?.pause()
-            playerViewController?.player = nil
             NCGPallyConSDKManager.sharedManager.clearPlaybackUrl()
             NCGPlaybackManager.sharedManager.setNcgContentForPlayback(nil)
+            playerViewController?.player?.pause()
+            playerViewController?.player = nil
             playerViewController = nil
         }
     }
@@ -77,10 +76,8 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
             return "HLS"
-        } else if section == 1{
-            return "MP4"
         } else {
-            return "Zip"
+            return "MP4"
         }
     }
 
