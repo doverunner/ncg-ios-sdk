@@ -14,11 +14,11 @@
         <Path>implementation.html</Path>
        </Node>
        <Node>
-        <Name>Classes</Name>
+        <Name>클래스</Name>
         <Path>annotated.html</Path>
       <Subnodes>
          <Node>
-          <Name>Class List</Name>
+          <Name>클래스 목록</Name>
           <Path>annotated.html</Path>
         <Subnodes>
            <Node>
@@ -41,39 +41,9 @@
               <Anchor>a89cedf4e18a362743408648adf2ec50f</Anchor>
              </Node>
              <Node>
-              <Name>setHttpRequestDelegate:</Name>
+              <Name>checkLicenseValidByToken:result:error:</Name>
               <Path>interface_ncg2_agent.html</Path>
-              <Anchor>a124c09a993cedb0d8f02b2ad11766348</Anchor>
-             </Node>
-             <Node>
-              <Name>checkLicenseValidByPath:result:error:</Name>
-              <Path>interface_ncg2_agent.html</Path>
-              <Anchor>a999b3d547777caffab31a76a7d4ae9ba</Anchor>
-             </Node>
-             <Node>
-              <Name>checkLicenseValidByCID:siteID:result:error:</Name>
-              <Path>interface_ncg2_agent.html</Path>
-              <Anchor>ae339d0d35c8b012bb5f6fbe6cc13d618</Anchor>
-             </Node>
-             <Node>
-              <Name>getLicenseInfoByPath:licenseValidation:licenseInformation:error:</Name>
-              <Path>interface_ncg2_agent.html</Path>
-              <Anchor>a721bc4bc7167bb8c5c2d497a52d91e8e</Anchor>
-             </Node>
-             <Node>
-              <Name>getLicenseInfoByCID:siteID:licenseValidation:licenseInformation:error:</Name>
-              <Path>interface_ncg2_agent.html</Path>
-              <Anchor>a5a9bf813d0483c6c715727035ab1d11e</Anchor>
-             </Node>
-             <Node>
-              <Name>acquireLicenseByPath:userID:orderID:isTemporary:error:</Name>
-              <Path>interface_ncg2_agent.html</Path>
-              <Anchor>aafe3ba602efa00f5d8d2814332129403</Anchor>
-             </Node>
-             <Node>
-              <Name>acquireLicenseByCID:siteID:userID:orderID:acquisitionUrl:isTemporary:error:</Name>
-              <Path>interface_ncg2_agent.html</Path>
-              <Anchor>a3ac1da0913f7c8b061461f9af1cfcf64</Anchor>
+              <Anchor>a8e1ed241cdd679ba36a865c2908c4f97</Anchor>
              </Node>
              <Node>
               <Name>acquireLicenseByToken:isTemporary:error:</Name>
@@ -96,89 +66,39 @@
               <Anchor>ae222f4a0dd607f9d8da2e3b97c6c4e57</Anchor>
              </Node>
              <Node>
-              <Name>decreasePlaybackCount:error:</Name>
+              <Name>setHttpRequestDelegate:</Name>
               <Path>interface_ncg2_agent.html</Path>
-              <Anchor>ad132e8655c1748aca858535ebb22319f</Anchor>
+              <Anchor>a124c09a993cedb0d8f02b2ad11766348</Anchor>
              </Node>
              <Node>
-              <Name>removeLicenseByPath:error:</Name>
+              <Name>setExceptionalEventDelegate:logLevel:</Name>
               <Path>interface_ncg2_agent.html</Path>
-              <Anchor>ad8c38994c1490d2b2b3d8f3695f504bd</Anchor>
+              <Anchor>ab712b8b5f167c8c289bca4d5c2a541f2</Anchor>
              </Node>
              <Node>
-              <Name>removeLicenseByCID:error:</Name>
+              <Name>checkLicenseValidByPath:result:error:</Name>
               <Path>interface_ncg2_agent.html</Path>
-              <Anchor>a945468f37dace52db64199eb86dc4dae</Anchor>
+              <Anchor>a999b3d547777caffab31a76a7d4ae9ba</Anchor>
              </Node>
              <Node>
-              <Name>removeAllTemporaryLicense:</Name>
+              <Name>checkLicenseValidByCID:siteID:result:error:</Name>
               <Path>interface_ncg2_agent.html</Path>
-              <Anchor>a2c6b1dab4b8945fae1bba4e120c23b69</Anchor>
+              <Anchor>ae339d0d35c8b012bb5f6fbe6cc13d618</Anchor>
              </Node>
              <Node>
-              <Name>isNcgContent:error:</Name>
+              <Name>getLicenseInfoByPath:licenseValidation:licenseInformation:error:</Name>
               <Path>interface_ncg2_agent.html</Path>
-              <Anchor>a9e8f966469ab08da235e5a8d4b69e855</Anchor>
+              <Anchor>a721bc4bc7167bb8c5c2d497a52d91e8e</Anchor>
              </Node>
              <Node>
-              <Name>createNcgFile:</Name>
+              <Name>getLicenseInfoByCID:siteID:licenseValidation:licenseInformation:error:</Name>
               <Path>interface_ncg2_agent.html</Path>
-              <Anchor>a9f48514aacc14585452534cfe08a61f4</Anchor>
+              <Anchor>a5a9bf813d0483c6c715727035ab1d11e</Anchor>
              </Node>
              <Node>
-              <Name>getNcg2HeaderInfo:error:</Name>
+              <Name>getLicenseInfoByToken:licenseValidation:licenseInformation:error:</Name>
               <Path>interface_ncg2_agent.html</Path>
-              <Anchor>a8abf47f0297241fd69489778ac1e3022</Anchor>
-             </Node>
-             <Node>
-              <Name>getNcgSecureTime</Name>
-              <Path>interface_ncg2_agent.html</Path>
-              <Anchor>af488be3319050116a6577ad39501b023</Anchor>
-             </Node>
-             <Node>
-              <Name>updateSecureTimeFromServer:</Name>
-              <Path>interface_ncg2_agent.html</Path>
-              <Anchor>afb68ab3936252095ea23da73e3529c4c</Anchor>
-             </Node>
-             <Node>
-              <Name>getLocalWebServerInstance</Name>
-              <Path>interface_ncg2_agent.html</Path>
-              <Anchor>abc9d19ba20650f7e28b7ca6c86a1f315</Anchor>
-             </Node>
-             <Node>
-              <Name>getNcgDeviceID:</Name>
-              <Path>interface_ncg2_agent.html</Path>
-              <Anchor>a3bbcd795e32c834112f8d6260f111ac9</Anchor>
-             </Node>
-             <Node>
-              <Name>sendCustomRequest:siteID:requestData:error:</Name>
-              <Path>interface_ncg2_agent.html</Path>
-              <Anchor>adb80d8c96f91415ccf7f107404650c8d</Anchor>
-             </Node>
-             <Node>
-              <Name>pallyconVendorRegistration:error:</Name>
-              <Path>interface_ncg2_agent.html</Path>
-              <Anchor>ad0b09308d297e6f1fc3e48da032ff708</Anchor>
-             </Node>
-             <Node>
-              <Name>enableLog</Name>
-              <Path>interface_ncg2_agent.html</Path>
-              <Anchor>a00f92c41556676e4d9de35b086984d9c</Anchor>
-             </Node>
-             <Node>
-              <Name>disableLog</Name>
-              <Path>interface_ncg2_agent.html</Path>
-              <Anchor>a142d88a1f04f795335d0e2e7c96f204e</Anchor>
-             </Node>
-             <Node>
-              <Name>setScreenRecorderAppDetecting:</Name>
-              <Path>interface_ncg2_agent.html</Path>
-              <Anchor>a2d0dc496135d124fac800717b38d020d</Anchor>
-             </Node>
-             <Node>
-              <Name>getDetectedScreenRecorderName</Name>
-              <Path>interface_ncg2_agent.html</Path>
-              <Anchor>a882bc11ee6a4c3c4df1f47aa9ed9e111</Anchor>
+              <Anchor>a0f95c51692797d28d1c6c57b139248ca</Anchor>
              </Node>
             </Subnodes>
            </Node>
@@ -232,14 +152,14 @@
               <Anchor>a8093cd102f81b84959173d6b577b87c4</Anchor>
              </Node>
              <Node>
-              <Name>decreasePlayCount:</Name>
-              <Path>interface_ncg2_file.html</Path>
-              <Anchor>abe4e28d9559d3284b423d4ebbbed7f4d</Anchor>
-             </Node>
-             <Node>
               <Name>getNcgHeaderSize:</Name>
               <Path>interface_ncg2_file.html</Path>
               <Anchor>a5c4300444071847034105d5d25f0ee03</Anchor>
+             </Node>
+             <Node>
+              <Name>decreasePlayCount:</Name>
+              <Path>interface_ncg2_file.html</Path>
+              <Anchor>abe4e28d9559d3284b423d4ebbbed7f4d</Anchor>
              </Node>
             </Subnodes>
            </Node>
@@ -338,6 +258,41 @@
               <Path>interface_ncg2_header_information.html</Path>
               <Anchor>a8627f8e80199c4fefe86a15df1ce5228</Anchor>
              </Node>
+             <Node>
+              <Name>contentID</Name>
+              <Path>interface_ncg2_header_information.html</Path>
+              <Anchor>a294d973c87d53138a6221a3cac9fec47</Anchor>
+             </Node>
+             <Node>
+              <Name>siteID</Name>
+              <Path>interface_ncg2_header_information.html</Path>
+              <Anchor>af9499e1c4dcbeb967856a5535bbaff5c</Anchor>
+             </Node>
+             <Node>
+              <Name>acquisitionUrl</Name>
+              <Path>interface_ncg2_header_information.html</Path>
+              <Anchor>a3b5d6531ae57ac602ad8e8f10506bd9c</Anchor>
+             </Node>
+             <Node>
+              <Name>source</Name>
+              <Path>interface_ncg2_header_information.html</Path>
+              <Anchor>a5c09c8d2a04ec88c95fe5544e8b89638</Anchor>
+             </Node>
+             <Node>
+              <Name>packDate</Name>
+              <Path>interface_ncg2_header_information.html</Path>
+              <Anchor>ac135d36a95c1fa9c7a3550a76c908491</Anchor>
+             </Node>
+             <Node>
+              <Name>encryptionLevel</Name>
+              <Path>interface_ncg2_header_information.html</Path>
+              <Anchor>ad5351d6a2d7e547d688ec17094a4a0a3</Anchor>
+             </Node>
+             <Node>
+              <Name>encryptionRange</Name>
+              <Path>interface_ncg2_header_information.html</Path>
+              <Anchor>a502afbef0fbd5966324cfb19e0bb39de</Anchor>
+             </Node>
             </Subnodes>
            </Node>
            <Node>
@@ -379,6 +334,11 @@
               <Path>interface_ncg2_license_information.html</Path>
               <Anchor>afc20a3b9fedf84ba529d2ccdbc3e1411</Anchor>
              </Node>
+             <Node>
+              <Name>getOutputProtectionPermission</Name>
+              <Path>interface_ncg2_license_information.html</Path>
+              <Anchor>aed6119fdf792dee5fb0045314db38ba3</Anchor>
+             </Node>
             </Subnodes>
            </Node>
            <Node>
@@ -418,9 +378,34 @@
               <Anchor>a055273724ef1bc5f503e735943f7adbf</Anchor>
              </Node>
              <Node>
+              <Name>addLocalFilePathForPlayback:remoteUrlForDnp:contentId:siteId:fileSize:error:</Name>
+              <Path>interface_ncg2_webserver.html</Path>
+              <Anchor>a33732f505d7ed17229fafe3024005c86</Anchor>
+             </Node>
+             <Node>
+              <Name>addLocalFileForUrl:token:error:</Name>
+              <Path>interface_ncg2_webserver.html</Path>
+              <Anchor>a42be8e0d54f48ef11d32f8621c708d2b</Anchor>
+             </Node>
+             <Node>
+              <Name>addProgressiveDownloadUrlFor:token:error:</Name>
+              <Path>interface_ncg2_webserver.html</Path>
+              <Anchor>ac28a3f65b2df1dd2426ec81576e2fb22</Anchor>
+             </Node>
+             <Node>
+              <Name>addHttpLiveStreamForUrl:token:error:</Name>
+              <Path>interface_ncg2_webserver.html</Path>
+              <Anchor>a3d404f07df774923817c46c407f37845</Anchor>
+             </Node>
+             <Node>
               <Name>addProgressiveDownloadUrlForPlayback:error:</Name>
               <Path>interface_ncg2_webserver.html</Path>
               <Anchor>a312e46e7d29a03b925af395d889d9d3b</Anchor>
+             </Node>
+             <Node>
+              <Name>addProgressiveDownloadUrlForPlayback:contentId:siteId:error:</Name>
+              <Path>interface_ncg2_webserver.html</Path>
+              <Anchor>a99ba19d675ce33f290b4a058ae563a3e</Anchor>
              </Node>
              <Node>
               <Name>addHttpLiveStreamUrlForPlayback:error:</Name>
@@ -473,6 +458,21 @@
             <Name>&lt;NcgExceptionalEventDelegate&gt;</Name>
             <Path>protocol_ncg_exceptional_event_delegate-p.html</Path>
           <Subnodes>
+             <Node>
+              <Name>log:</Name>
+              <Path>protocol_ncg_exceptional_event_delegate-p.html</Path>
+              <Anchor>ac4c0c6278137be86ac0bf0d0897d3e1e</Anchor>
+             </Node>
+             <Node>
+              <Name>logHandle:</Name>
+              <Path>protocol_ncg_exceptional_event_delegate-p.html</Path>
+              <Anchor>a10445ef672f0650884857ed7d53082c9</Anchor>
+             </Node>
+             <Node>
+              <Name>log:comment:</Name>
+              <Path>protocol_ncg_exceptional_event_delegate-p.html</Path>
+              <Anchor>aac54cb3757638374c9c56874e4d93f3c</Anchor>
+             </Node>
             </Subnodes>
            </Node>
            <Node>
@@ -498,6 +498,16 @@
               <Name>getLastErrorMessage</Name>
               <Path>protocol_ncg_http_request_delegate-p.html</Path>
               <Anchor>a42efc2eb713f9e2a6a2b54539ff5bc60</Anchor>
+             </Node>
+             <Node>
+              <Name>getResponseHttpHeader</Name>
+              <Path>protocol_ncg_http_request_delegate-p.html</Path>
+              <Anchor>a7eed4df7a7dd91e768d08200b7558744</Anchor>
+             </Node>
+             <Node>
+              <Name>httpLwsSendRangeRequest:urlParameter:requestHeaders:</Name>
+              <Path>protocol_ncg_http_request_delegate-p.html</Path>
+              <Anchor>aadfb576c6b00b9018101c4da57be86c4</Anchor>
              </Node>
             </Subnodes>
            </Node>
@@ -525,11 +535,11 @@
           </Subnodes>
          </Node>
          <Node>
-          <Name>Class Index</Name>
+          <Name>클래스 색인</Name>
           <Path>classes.html</Path>
          </Node>
          <Node>
-          <Name>Class Hierarchy</Name>
+          <Name>클래스 계통도</Name>
           <Path>hierarchy.html</Path>
         <Subnodes>
            <Node>
@@ -591,16 +601,20 @@
           </Subnodes>
          </Node>
          <Node>
-          <Name>Class Members</Name>
+          <Name>클래스 멤버</Name>
           <Path>functions.html</Path>
         <Subnodes>
            <Node>
-            <Name>All</Name>
+            <Name>모두</Name>
             <Path>functions.html</Path>
            </Node>
            <Node>
-            <Name>Functions</Name>
+            <Name>함수</Name>
             <Path>functions_func.html</Path>
+           </Node>
+           <Node>
+            <Name>속성</Name>
+            <Path>functions_prop.html</Path>
            </Node>
           </Subnodes>
          </Node>

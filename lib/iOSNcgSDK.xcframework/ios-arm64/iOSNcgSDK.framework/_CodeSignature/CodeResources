@@ -6,15 +6,15 @@
 	<dict>
 		<key>Headers/NCG_Error.h</key>
 		<data>
-		KIVd+qXFaH60qVK5+Miivo4bGCM=
+		kI84p+urgiF6hOx7FFllOOtt2Vg=
 		</data>
 		<key>Headers/Ncg2Agent.h</key>
 		<data>
-		OLCLH7GbPO65x52rgJYqMWkAWBQ=
+		7kzQNjN0RoNOu/umSSXRSX1l4ZE=
 		</data>
 		<key>Headers/Ncg2File.h</key>
 		<data>
-		AYyBBUpvLlfwAbhHxClekQesJJ4=
+		BZ7CuPWE9EmNPQIwX4R/HA1PhRk=
 		</data>
 		<key>Headers/Ncg2FileZip.h</key>
 		<data>
@@ -22,11 +22,11 @@
 		</data>
 		<key>Headers/Ncg2SdkCommon.h</key>
 		<data>
-		WuagkDmTMmOUWEFe0y9GQkrgGPI=
+		JMakGGVFoS+HJApKwBmy3ni4Iy8=
 		</data>
 		<key>Headers/Ncg2Webserver.h</key>
 		<data>
-		BgIEqBjuk8qihYMaOXdwEDyzEZA=
+		v2gRY1NuIXdgM1DJwhszg72bwrw=
 		</data>
 		<key>Headers/iOSNcgSDK.h</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		fsf8f6sd04xLIECP8aIIUy1+H7E=
+		/TPOuOpwTP+ZyOnvOdETbqYZtn4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>NCG-iOS-SDK.WhatIsNew.html</key>
 		<data>
-		CKdNuCc1hqww/ngsltc3zruSlVc=
+		1HiuKBMJrRuOIeyGICOkPvOu0Uk=
 		</data>
 		<key>NCG-iOS-SDK.WhatIsNew_Eng.html</key>
 		<data>
-		jnNYlN4vWXqfT8niMdy4yH19dfM=
+		aSC5xWAONPjgg28I9+jPlVWwocY=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -63,33 +63,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KIVd+qXFaH60qVK5+Miivo4bGCM=
+			kI84p+urgiF6hOx7FFllOOtt2Vg=
 			</data>
 			<key>hash2</key>
 			<data>
-			AL3zELmSN7CIopO2eltrJ2tgc6U4wfTi/taPmHD0WT8=
+			fQhqWu6TwVVTJlDOxChVDjIFFqA7dNFF4BvxgAKuHgs=
 			</data>
 		</dict>
 		<key>Headers/Ncg2Agent.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			OLCLH7GbPO65x52rgJYqMWkAWBQ=
+			7kzQNjN0RoNOu/umSSXRSX1l4ZE=
 			</data>
 			<key>hash2</key>
 			<data>
-			p9V9zRAjpKpiGLbjEjzu4b9TRdJ/aMxuYCUaD/UPobE=
+			vHGLu3dL2o4RrOshYO+WKyRu/GpwbibYMDKhbHBgQ60=
 			</data>
 		</dict>
 		<key>Headers/Ncg2File.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			AYyBBUpvLlfwAbhHxClekQesJJ4=
+			BZ7CuPWE9EmNPQIwX4R/HA1PhRk=
 			</data>
 			<key>hash2</key>
 			<data>
-			KEtlECC31ergKzp+hnDbK8GLgiMd+3JIXynXmwNrQb8=
+			azjLWd9Z+za/vdtIyjzxUSaZ+2qBE/53CFFI+LDxa0M=
 			</data>
 		</dict>
 		<key>Headers/Ncg2FileZip.h</key>
@@ -107,22 +107,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			WuagkDmTMmOUWEFe0y9GQkrgGPI=
+			JMakGGVFoS+HJApKwBmy3ni4Iy8=
 			</data>
 			<key>hash2</key>
 			<data>
-			QrSHXjvvRYXU6y6EFP8MqjFflQsdKntT+PaWQrJEFXU=
+			T0pkFKRHegx8Xryfg56VP9CdPiwSrasULouCfFS/0hg=
 			</data>
 		</dict>
 		<key>Headers/Ncg2Webserver.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BgIEqBjuk8qihYMaOXdwEDyzEZA=
+			v2gRY1NuIXdgM1DJwhszg72bwrw=
 			</data>
 			<key>hash2</key>
 			<data>
-			yFL4wMgF6NavsqHrCitHrUCnO+H+939u5D8izjrxiRo=
+			EMw+7mQXnHXuk5OOQWVl03xLJHQZofmzl6w6NYLmvUM=
 			</data>
 		</dict>
 		<key>Headers/iOSNcgSDK.h</key>
@@ -173,22 +173,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CKdNuCc1hqww/ngsltc3zruSlVc=
+			1HiuKBMJrRuOIeyGICOkPvOu0Uk=
 			</data>
 			<key>hash2</key>
 			<data>
-			nRsQZzgJzSqWtHXciX99lRMLXUYo5RrAFF8LJgMhTGM=
+			EQiAn5s0ck5Zx++YwW0QcU2eUgljXE9a2luCtaOXi5E=
 			</data>
 		</dict>
 		<key>NCG-iOS-SDK.WhatIsNew_Eng.html</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			jnNYlN4vWXqfT8niMdy4yH19dfM=
+			aSC5xWAONPjgg28I9+jPlVWwocY=
 			</data>
 			<key>hash2</key>
 			<data>
-			LHNIAeTqhIqeuGy6XlMCFYDYu1MvTt6zOuY61l1NjjY=
+			i7Rrrq1QiHGnuCUqbweTDVGE0/0pssd/GzUHnwR6wAQ=
 			</data>
 		</dict>
 	</dict>

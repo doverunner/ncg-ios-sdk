@@ -6,5 +6,6 @@ var interface_ncg2_license_information =
     [ "getPlayVerificationMethod", "interface_ncg2_license_information.html#a960325248c73d554d839d295836477bb", null ],
     [ "getPlayDurationHour", "interface_ncg2_license_information.html#aca2106395ea74ac285475fe65d4561a6", null ],
     [ "getPlayTotalCount", "interface_ncg2_license_information.html#a95206b75715f480ddb5017bb1df23bb9", null ],
-    [ "getPlayRemainCount", "interface_ncg2_license_information.html#afc20a3b9fedf84ba529d2ccdbc3e1411", null ]
+    [ "getPlayRemainCount", "interface_ncg2_license_information.html#afc20a3b9fedf84ba529d2ccdbc3e1411", null ],
+    [ "getOutputProtectionPermission", "interface_ncg2_license_information.html#aed6119fdf792dee5fb0045314db38ba3", null ]
 ];

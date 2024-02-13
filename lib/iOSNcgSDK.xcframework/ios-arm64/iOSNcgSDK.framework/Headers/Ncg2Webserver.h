@@ -8,19 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-/**
- * @if KOREA
- * 로컬웹서버에서 SDK외부로 이벤트를 전달하기 위한 인터페이스
- * 오류 혹은 통지를 전달할때나 Player의 상태를 확인하기 위해서 해당 인터페이스가 메소드가 호출되어진다.
- * SDK를 이용하는 클라이언트에서는 해당 인터페이스를 반드시 구현하여 setWebServerDelegate: 메소드를 통해 객체를 등록시켜줘야 한다.
- * @endif
- *
- * @if ENGLISH
- * Interface to deliver event from local web server outside SDK
- * The method is called for the applicable interface to deliver an error or notice, or to confirm the status of Player.
- * A client using SDK must implement the applicable interface to register the object through the method of setWebServerDelegate:.
- * @endif
- */
+/// Interface to deliver event from local web server outside SDK
+/// The method is called for the applicable interface to deliver an error or notice, or to confirm the status of Player.
+/// A client using SDK must implement the applicable interface to register the object through the method of setWebServerDelegate:.
 typedef enum _WebserverErrorCode
 {
     /**
@@ -270,19 +260,8 @@ typedef enum _WebserverErrorCode
     
 } WebserverErrorCode;
 
-/**
- * @if KOREA
- * Player의 상태를 나타내기 위한 enum 타입
- *
- * onCheckPlayerStatus 메소드에서 사용된다.
- * @endif
- *
- * @if ENGLISH
- * enum type to indicate Player status
- *
- * Used in onCheckPlayerStatus method.
- * @endif
- */
+/// enum type to indicate Player status
+/// Used in ``WebServerDelegate/onCheckPlayerStatus:`` method.
 typedef enum _PlayerState
 {
     /**
@@ -323,65 +302,26 @@ typedef enum _PlayerState
 // @protocol WebServerDelegate
 //---------------------------------------------------------------------------------
 
-/**
- * @if KOREA
- * WebServerDelegates는 WebServer의 내부에서 SDK 외부로 통지되는 Delegate
- * @endif
- *
- * @if ENGLISH
- * WebServerDelegate is local web server Delegate.
- * @endif
- */
+/// WebServerDelegate is local web server Delegate.
 @protocol WebServerDelegate <NSObject>
-@required
+@optional
 
-/**
- * @if KOREA
- * 로컬웹서버 내부에서 SDK 외부로 통지가 필요한 경우 해당 메소드가 호출되어진다.
- * @param notificationCode 통지코드
- * @param notifyMessage    통지메시지
- * @endif
- *
- * @if ENGLISH
- * When it is needed to notify from local web server outside SDK, the applicable method is called.
- * @param notificationCode Notice code
- * @param notifyMessage    Notice message
- * @endif
- */
+
+/// When it is needed to notify from local web server outside SDK, the applicable method is called.
+/// @param notificationCode Notice code
+/// @param notifyMessage    Notice message
 -(void) onNotification:(int)notificationCode  notifyMessage:(NSString*)notifyMessage;
 
-/**
- * @if KOREA
- * 로컬웹서버 재생시 오류가 발생된 경우 해당 메소드가 호출되어진다.
- *
- * @param errorCode 오류코드
- * @param errorMessage 오류메시지
- * @endif
- *
- * @if ENGLISH
- * When an error occurs while playing local web server, the applicable method is called.
- *
- * @param errorCode Error code
- * @param errorMessage Error message
- * @endif
- */
+
+/// When an error occurs while playing local web server, the applicable method is called.
+/// @param errorCode Error code
+/// @param errorMessage Error message
 -(void) onError:(int)errorCode errorMessage:(NSString*)errorMessage;
 
-/**
- * @if KOREA
- * 로컬웹서버에서 특정 재생 URI가 정사적으로 재생되고 있는지 지속적으로 확인하기 위해 해당 함수가 재생시 호출된다.
- *
- * @param uri 재생상태를 체크할 URI
- * @return 재생 상태에 따라 PlayerState를 리턴한다.
- * @endif
- *
- * @if ENGLISH
- * This function is called while playing in order to continuously confirm whether a certain play URI is normally played in local web server.
- *
- * @param uri URI to check the status of play
- * @return PlayerState return.
- * @endif
- */
+/// This function is called while playing in order to continuously confirm whether a certain play URI is normally played in local web server.
+/// @param uri URI to check the status of play
+/// @return PlayerState return.
+@required
 -(PlayerState) onCheckPlayerStatus:(NSString*)uri;
 
 @end
@@ -390,337 +330,188 @@ typedef enum _PlayerState
 // @interface Ncg2Webserver
 //---------------------------------------------------------------------------------
 
-/**
- * @if KOREA
- * 재생을 위한 LocalWebServer 클래스이다.
- *
- * 해당 클래스를 통해 NCG 파일을 로컬웹서버에 설정하고 재생할 수 있는 URL를 획득할 수 있다.
- * 재생 URL은 일반 플레이어를 통해 재생될 수 있다.
- * 해당 인터페이스의 인스턴스는 Ncg2Agent의 getLocalWebserver() 메소드를 통해 얻어올 수 있다.
- * @endif
- *
- * @if ENGLISH
- * LocalWebServer class for play.
- *
- * By using this class, you can acquire URL to set and play NCG files in local web server.
- * Play URL can be played with a general player.
- * Instance of the applicable interface can be obtained by getLocalWebserver() method of Ncg2Agent.
- * @endif
- */
+/// LocalWebServer class for play.
+/// By using this class, you can acquire URL to set and play NCG files in local web server.
+/// Play URL can be played with a general player.
+/// Instance of the applicable interface can be obtained by ``Ncg2Agent/getLocalWebServerInstance``
 @interface Ncg2Webserver : NSObject
 @property (nonatomic, retain) NSString* httpCustomHeader;
 @property (nonatomic, retain) id<WebServerDelegate> _WebServerDelegate;
 
-/**
- * @if KOREA
- * Ncg2Webserver 초기화
- *
- * @param ncgCoreH    ncg core 객체
- * @return Ncg2Webserver 객체 리턴한다.
- * @endif
- *
- * @if ENGLISH
- * Ncg2Webserver initialize.
- *
- * @param ncgCoreH    ncg core object.
- * @return Ncg2Webserver object.
- * @endif
- */
+
+/// ``Ncg2Webserver`` initialize.
+/// However, instead of this function, you must create an instance with ``Ncg2Agent/getLocalWebServerInstance``.
+/// @param ncgCoreH ncg core object.
+/// @return ``Ncg2Webserver`` object.
 -(id) init:(void*)ncgCoreH;
 
-/**
- * @if KOREA
- * 로컬웹서버를 실행시킨다.
- *
- * @param error             nil 아닌 경우 해당에러를 확인한다.
- * @return 성공이면 YES. 실패이면 NO.
- * @endif
- *
- * @if ENGLISH
- * local web server run.
- *
- * @param error             check error if nil no. succeeded if nil.
- * @return YES if succeeded. NO if failed.
- * @endif
- */
+
+/// Local web server run.
+/// @param error check error if nil no. succeeded if nil.
+/// @return TRUE if Succeeded, FALSE if Fail.
 -(BOOL) startWebserver:(NSError**)error;
 
-/**
- * @if KOREA
- * 로컬웹서버를 멈춘다.
- * @endif
- *
- * @if ENGLISH
- * local web server Stop.
- * @endif
- */
+
+/// local web server Stop.
 -(void) stopWebserver;
 
-/**
- * @if KOREA
- * Local에 존재하는 NCG파일을 재생하기 위해 NCG 파일의 Path를  셋팅하고 재생을 위한 URL를 획득하기 위해 사용되는 메소드이다.
- *
- * @param path              Local Playback 형태로 재생하기 위한 NCG 파일의 경로
- * @param remoteUrlForDnp   다운로드 URL
- * @param fileSize          DnP(DownlaodAndPlay)형태로 NCG 파일을 재생하기 위해서는 NCG 파일의 크기를 전달받아야 한다. DnP재생이 아닌 경우 0으로 설정하면 된다.
- * @param error             nil 아닌 경우 해당에러를 확인한다.
- * @return
- * 재생을 위한 로컬웹서버의 암호화된 재생 URL를 반환한다.
- * 해당 재생 URL은 최초 접근시간이 제한되어 있으므로 해당 함수가 호출된 이후 바로 재생을 시켜야 한다.
- * 재생 URL의 최초 접근시간이란 해당 함수가 반환된 이후 접속할 수 있는 제한된 시간을 뜻 한다.
- * 따라서 해당 함수가 반환된 후 가능한 빨리 재생 URL에 접속하여 재생해야 한다.
- * @endif
- *
- * @if ENGLISH
- * A method to set the path of NCG file to play NCG file in Local and acquire Play URL.
- *
- * @param path              NCG file path to play in a form of Local Playback
- * @param remoteUrlForDnp   remote URL
- * @param fileSize          Playing NCG file in a form of DnP(DownlaodAndPlay) requires receiving the size of NCG file. If not in DnP play, set as 0.
- * @param error             check error if nil no. succeeded if nil.
- * @return
- * Return Play URL which is encrypted in local web server for playing.
- * Since the applicable Play URL has its first access time limited, it should be played right after the applicable function is called.
- * First access time of Play URL refers to the limited time during which one can access after the applicable function is returned.
- * Thus, necessarily access Play URL and play it as soon as possible right after the applicable function is returned.
- * @endif
- */
+/// The NCG file path is returned changed to the Local Web Server address.
+/// @param path  NCG file path to play in a form of Local Playback
+/// @param remoteUrlForDnp   remote URL
+/// @param fileSize Playing NCG file in a form of DnP(DownlaodAndPlay) requires receiving the size of NCG file. If not in DnP play, set as 0.
+/// @param error check error if nil no. succeeded if nil.
+/// @return Local Web Server address.
+/// > Important: URLs generated by the local web server are blocked from access after a period of time, so you should try to play them as soon as possible.
 -(NSString*) addLocalFilePathForPlayback:(NSString*)path remoteUrlForDnp:(NSString*)remoteUrlForDnp fileSize:(int64_t)fileSize error:(NSError**)error;
 
--(NSString*) addLocalFilePathForPlayback:(NSString*)path
-                         remoteUrlForDnp:(NSString*)remoteUrlForDnp
-                               contentId:(NSString*)contentId
-                                  siteId:(NSString*)siteId
-                                fileSize:(int64_t)fileSize
-                                   error:(NSError**)error;
 
-/**
- * @if KOREA
- * ProgressiveDownload 형태로 NCG를 재생하기 위해  URL를 셋팅하고 재생을 위한 URL를 획득하기 위해 사용되는 메소드이다.
- *
- * @param url       ProgressiveDownload 형태로 재생하기 위한 NCG 파일의 URL 경로
- * @param error     nil 아닌 경우 해당에러를 확인한다.
- * @return
- * 재생을 위한 로컬웹서버의 암호화된 재생 URL를 반환한다.
- * 해당 재생 URL은 최초 접근시간이 제한되어 있으므로 해당 함수가 호출된 이후 바로 재생을 시켜야 한다.
- * 재생 URL의 최초 접근시간이란 해당 함수가 반환된 이후 접속할 수 있는 제한된 시간을 뜻 한다.
- * 따라서 해당 함수가 반환된 후 가능한 빨리 재생 URL에 접속하여 재생해야 한다.
- * @endif
- *
- * @if ENGLISH
- * A method to set URL to play NCG in a form of ProgressiveDownload and acquire Play URL.
- *
- * @param url       URL path of NCG file to play in a form of ProgressiveDownload
- * @param error     check error if nil no. succeeded if nil.
- * @return
- * Return Play URL which is encrypted in local web server for playing.
- * Since the applicable Play URL has its first access time limited, it should be played right after the applicable function is called.
- * First access time of Play URL refers to the limited time during which one can access after the applicable function is returned.
- * Thus, necessarily access Play URL and play it as soon as possible right after the applicable function is returned.
- * @endif
- */
+/// The NCG file path is returned changed to the Local Web Server address.
+/// @param path NCG file path to play in a form of Local Playback.
+/// @param remoteUrlForDnp remote URL.
+/// @param contentId Content ID.
+/// @param siteId Site ID.
+/// @param fileSize file size.
+/// @param error check error if nil no. succeeded if nil.
+/// @return Local Web Server address.
+/// > Important: URLs generated by the local web server are blocked from access after a period of time, so you should try to play them as soon as possible.
+-(NSString*) addLocalFilePathForPlayback:(NSString*)path remoteUrlForDnp:(NSString*)remoteUrlForDnp
+                               contentId:(NSString*)contentId siteId:(NSString*)siteId
+                                fileSize:(int64_t)fileSize error:(NSError**)error;
+
+
+/// The NCG file path is returned changed to the Local Web Server address.
+/// - Parameters:
+///   - path: NCG file path.
+///   - token: token
+///   - error: check error if nil no. succeeded if nil.
+/// - Returns: Local Web Server address.
+/// > Important: URLs generated by the local web server are blocked from access after a period of time, so you should try to play them as soon as possible.
+-(NSString*) addLocalFileForUrl:(NSString*)path token:(NSString*)token error:(NSError**)error;
+
+/// A method to set URL to play NCG in a form of ProgressiveDownload and acquire Play URL.
+/// @param url URL path of NCG file to play in a form of ProgressiveDownload
+/// @param error check error if nil no. succeeded if nil.
+/// @param token token
+/// @return Local Web Server address.
+/// > Important: URLs generated by the local web server are blocked from access after a period of time, so you should try to play them as soon as possible.
+-(NSString*) addProgressiveDownloadUrlFor:(NSString*)url token:(NSString*)token error:(NSError**)error;
+
+
+/// The HLS-NCG URL is returned changed to the Local Web Server address.
+/// - Parameters:
+///    - url: HLS-NCG URL.
+///    - token: token
+///    - error: check error if nil no. succeeded if nil.
+///
+/// - Returns: Local Web Server address.
+/// > Important: URLs generated by the local web server are blocked from access after a period of time, so you should try to play them as soon as possible.
+-(NSString*) addHttpLiveStreamForUrl:(NSString*)url token:(NSString*)token error:(NSError**)error;
+
+
+/// A method to set URL to play NCG in a form of ProgressiveDownload and acquire Play URL.
+/// @param url URL path of NCG file to play in a form of ProgressiveDownload
+/// @param error check error if nil no. succeeded if nil.
+/// @return Local Web Server address.
+/// > Important: URLs generated by the local web server are blocked from access after a period of time, so you should try to play them as soon as possible.
 -(NSString*) addProgressiveDownloadUrlForPlayback:(NSString*)url error:(NSError**)error;
+
+
+/// A method to set URL to play NCG in a form of ProgressiveDownload and acquire Play URL.
+/// @param url URL path of NCG file to play in a form of ProgressiveDownload
+/// @param contentId content id
+/// @param siteId site id
+/// @param error check error if nil no. succeeded if nil.
+/// @return Local Web Server address.
+/// > Important: URLs generated by the local web server are blocked from access after a period of time, so you should try to play them as soon as possible.
 -(NSString*) addProgressiveDownloadUrlForPlayback:(NSString*)url contentId:(NSString*)contentId siteId:(NSString*)siteId error:(NSError**)error;
 
-/**
- * @if KOREA
- * NCG로 암호화된 HLS 컨텐츠를 재생하기 위해 HLS URL를 셋팅하고 재생을 위한 URL를 획득하기 위해 사용되는 메소드이다.
- *
- * @param url       HLS 컨텐츠의 URL
- * @param error     nil 아닌 경우 해당에러를 확인한다.
- * @return
- * 재생을 위한 로컬웹서버의 암호화된 재생 URL를 반환한다.
- * @endif
- *
- * @if ENGLISH
- * A method to set HLS URL to play HLS content encrypted with NCG and acquire Play URL.
- *
- * @param url       HLS content’s URL
- * @param error     check error if nil no. succeeded if nil.
- * @return
- * Return Play URL which is encrypted in local web server for playing.
- * @endif
- */
+
+/// A method to set HLS URL to play HLS content encrypted with NCG and acquire Play URL.
+/// @param url       HLS content’s URL
+/// @param error     check error if nil no. succeeded if nil.
+/// @return Local Web Server address.
+/// > Important: URLs generated by the local web server are blocked from access after a period of time, so you should try to play them as soon as possible.
 -(NSString*) addHttpLiveStreamUrlForPlayback:(NSString*)url error:(NSError**)error;
 
-/**
- * @if KOREA
- * NCG로 암호화된 HLS 컨텐츠를 재생하기 위해 HLS URL를 셋팅하고 재생을 위한 URL를 획득하기 위해 사용되는 메소드이다.
- * HLS LIVE 컨텐츠 일 경우 이 함수를 호출해야 한다.
- *
- * @param url       HLS 컨텐츠의 URL
- * @param isLiveHLS HLS LIVE Content 일 경우 YES
- * @param error     nil 아닌 경우 해당에러를 확인한다.
- * @return
- * 재생을 위한 로컬웹서버의 암호화된 재생 URL를 반환한다.
- * @endif
- *
- * @if ENGLISH
- * A method to set HLS URL to play HLS content encrypted with NCG and acquire Play URL.
- * If you are a HLS LIVE content, you must call this function.
- *
- * @param url       HLS content’s URL
- * @param isLiveHLS YES for HLS LIVE Content
- * @param error     check error if nil no. succeeded if nil.
- * @return
- * Return Play URL which is encrypted in local web server for playing.
- * @endif
- */
+
+/// A method to set HLS URL to play HLS content encrypted with NCG and acquire Play URL.
+/// If you are a HLS LIVE content, you must call this function.
+/// @param url       HLS content’s URL
+/// @param isLiveHLS YES for HLS LIVE Content
+/// @param error     check error if nil no. succeeded if nil.
+/// @return Local Web Server address.
+/// > Important: URLs generated by the local web server are blocked from access after a period of time, so you should try to play them as soon as possible.
 -(NSString*) addHttpLiveStreamUrlForPlayback:(NSString*)url isLiveHLS:(BOOL)isLiveHLS error:(NSError**)error;
 
-/**
- * @if KOREA
- * NCG로 암호화된 HLS 컨텐츠를 재생하기 위해 HLS URL를 셋팅하고 재생을 위한 URL를 획득하기 위해 사용되는 메소드이다.
- *
- * @param url       HLS 컨텐츠의 URL
- * @param cid       HLS 컨텐츠의 URL에 해당되는 Content ID
- * @param error     nil 아닌 경우 해당에러를 확인한다.
- * @return
- * 재생을 위한 로컬웹서버의 암호화된 재생 URL를 반환한다.
- * 해당 재생 URL은 최초 접근시간이 제한되어 있으므로 해당 함수가 호출된 이후 바로 재생을 시켜야 한다.
- * 재생 URL의 최초 접근시간이란 해당 함수가 반환된 이후 접속할 수 있는 제한된 시간을 뜻 한다.
- * 따라서 해당 함수가 반환된 후 가능한 빨리 재생 URL에 접속하여 재생해야 한다.
- * @endif
- *
- * @if ENGLISH
- * A method to set HLS URL to play HLS content encrypted with NCG and acquire Play URL
- *
- * @param url       HLS content’s URL
- * @param cid       Content ID of HLS content’s URL
- * @param error     check error if nil no. succeeded if nil.
- * @return
- * Return Play URL which is encrypted in local web server for playing.
- * Since the applicable Play URL has its first access time limited, it should be played right after the applicable function is called.
- * First access time of Play URL refers to the limited time during which one can access after the applicable function is returned.
- * Thus, necessarily access Play URL and play it as soon as possible right after the applicable function is returned.
- * @endif
- */
+
+/// A method to set HLS URL to play HLS content encrypted with NCG and acquire Play URL
+/// @param url       HLS content’s URL
+/// @param contentId       Content ID of HLS content’s URL
+/// @param error     check error if nil no. succeeded if nil.
+/// @return Local Web Server address.
+/// > Important: URLs generated by the local web server are blocked from access after a period of time, so you should try to play them as soon as possible.
 -(NSString*) addHttpLiveStreamUrlForPlayback:(NSString*)url contentId:(NSString*)contentId error:(NSError**)error;
 
-/**
- * @if KOREA
- * NCG로 암호화된 HLS 컨텐츠를 재생하기 위해 HLS URL를 셋팅하고 재생을 위한 URL를 획득하기 위해 사용되는 메소드이다.
- * HLS LIVE 컨텐츠 일 경우 이 함수를 호출해야 한다.
- *
- * @param url       HLS 컨텐츠의 URL
- * @param isLiveHLS HLS LIVE Content 일 경우 YES
- * @param cid       HLS 컨텐츠의 URL에 해당되는 Content ID
- * @param error     nil 아닌 경우 해당에러를 확인한다.
- * @return
- * 재생을 위한 로컬웹서버의 암호화된 재생 URL를 반환한다.
- * 해당 재생 URL은 최초 접근시간이 제한되어 있으므로 해당 함수가 호출된 이후 바로 재생을 시켜야 한다.
- * 재생 URL의 최초 접근시간이란 해당 함수가 반환된 이후 접속할 수 있는 제한된 시간을 뜻 한다.
- * 따라서 해당 함수가 반환된 후 가능한 빨리 재생 URL에 접속하여 재생해야 한다.
- * @endif
- *
- * @if ENGLISH
- * A method to set HLS URL to play HLS content encrypted with NCG and acquire Play URL
- * If you are a HLS LIVE content, you must call this function.
- *
- * @param url       HLS content’s URL
- * @param isLiveHLS YES for HLS LIVE Content
- * @param cid       Content ID of HLS content’s URL
- * @param error     check error if nil no. succeeded if nil.
- * @return
- * Return Play URL which is encrypted in local web server for playing.
- * Since the applicable Play URL has its first access time limited, it should be played right after the applicable function is called.
- * First access time of Play URL refers to the limited time during which one can access after the applicable function is returned.
- * Thus, necessarily access Play URL and play it as soon as possible right after the applicable function is returned.
- * @endif
- */
+
+/// A method to set HLS URL to play HLS content encrypted with NCG and acquire Play URL
+/// If you are a HLS LIVE content, you must call this function.
+/// @param url       HLS content’s URL
+/// @param isLiveHLS YES for HLS LIVE Content
+/// @param contentId    Content ID of HLS content’s URL
+/// @param siteId site id
+/// @param error     check error if nil no. succeeded if nil.
+/// @return Local Web Server address.
+/// > Important: URLs generated by the local web server are blocked from access after a period of time, so you should try to play them as soon as possible.
 -(NSString*) addHttpLiveStreamUrlForPlayback:(NSString*)url isLiveHLS:(BOOL)isLiveHLS contentId:(NSString*)contentId siteId:(NSString*)siteId error:(NSError**)error;
 
-/**
- * @if KOREA
- * NCG로 암호화된 HLS 컨텐츠를 재생하기 위해 HLS URL를 셋팅하고 재생을 위한 URL를 획득하기 위해 사용되는 메소드이다.
- * 해당 메소드는 addHttpLiveStreamUrlForPlayback()와는 다르게 m3u8 경로에 해당되는 key파일을 미리 체크하지 않는다.
- *
- * @param url       HLS 컨텐츠의 URL
- * @param error     nil 아닌 경우 해당에러를 확인한다.
- * @return
- * 재생을 위한 로컬웹서버의 암호화된 재생 URL를 반환한다.
- * @endif
- *
- * @if ENGLISH
- * A method to set HLS URL to play HLS content encrypted with NCG and acquire Play URL.
- * Unlike addHttpLiveStreamUrlForPlayback(), this method does not prior check key file falling under m3u8 path.
- *
- * @param url       HLS content’s URL
- * @param error     check error if nil no. succeeded if nil.
- * @return
- * Return Play URL which is encrypted in local web server for playing.
- * @endif
- */
+
+/// A method to set HLS URL to play HLS content encrypted with NCG and acquire Play URL.
+/// Unlike addHttpLiveStreamUrlForPlayback(), this method does not prior check key file falling under m3u8 path.
+/// @param url       HLS content’s URL
+/// @param error     check error if nil no. succeeded if nil.
+/// @return Local Web Server address.
+/// > Important: URLs generated by the local web server are blocked from access after a period of time, so you should try to play them as soon as possible.
 -(NSString*) addHttpLiveStreamUrlForPlaybackWithoutChecking:(NSString*)url error:(NSError**)error;
 
-/**
- * @if KOREA
- * 로컬웹서버 재생중 발생되는 이벤트를 전달받기 위해 WebServerDelegate 객체를 등록할수 있다.
- *
- * @param webServerDelegate 로컬웹서버에서 발생될 수 있는 이벤트를 받기 위핸 WebServerDelegate 객체
- * @endif
- *
- * @if ENGLISH
- * WebServerDelegate object can be registered to be informed of the events creating while playing local web server.
- *
- * @param webServerDelegate WebServerDelegate object to receive events that can be created in local web server
- * @endif
- */
+
+/// ``WebServerDelegate`` object can be registered to be informed of the events creating while playing local web server.
+/// @param webServerDelegate ``WebServerDelegate`` object to receive events that can be created in local web server
 -(void) setWebServerDelegate:(id<WebServerDelegate>)webServerDelegate;
 
-/**
- * @if KOREA
- * 설정된 재생 URL 정보를 지워준다.
- * @endif
- *
- * @if ENGLISH
- * Delete the set Play URL information.
- * @endif
- */
+
+/// Delete the set Play URL information.
 -(void) clearVirtualPlaybackUrls;
 
-/**
- * @if KOREA
- * Cookie 기능에 대한 검증기능을 활성화 혹은 비활성화시킨다.
- *
- * Android SDK에서 제공하는 Native용 MediaPlayer를 이용하는 경우 Cookie기능을 제공하지 않은 단말이 있으므로
- * setCookieChecking은 비활성화 되어야 한다.
- * 만약 Cookie기능이 제공되지 Player에서 재생하게 된다면 재생 중 onError() 콜백메소드가 호출될 것이다.
- * 재생 URL을 재생시킬 플레이어가 HTTP Cookie 기능을 지원한다면 해당 Cookie 기능을 활성화시킨다면 보안성을 더 높일 수 있다.
- *
- * @param enabled Cookie기능에 대한 설정값.
- * @endif
- *
- * @if ENGLISH
- * Activate or deactivate verification function for Cookie function.
- *
- * When using MediaPlayer for Native provided by Android SDK, there are terminals which do not provide Cookie function; thus
- * setCookieChecking should be deactivated.
- * If it is played by Player where Cookie function is not provided, onError() callback method is called while playing.
- * If Player to play Play URL supports HTTP Cookie function, when the applicable Cookie function is activated, the level of security can be more improved.
- *
- * @param enabled Set value for Cookie function.
- * @endif
- */
+///@TabNavigator {
+///    @Tab("English") {
+///        Activate or deactivate verification function for Cookie function.
+///        When using MediaPlayer for Native provided by Android SDK, there are terminals which do not provide Cookie function; thus
+///        setCookieChecking should be deactivated.
+///        If it is played by Player where Cookie function is not provided, onError() callback method is called while playing.
+///        If Player to play Play URL supports HTTP Cookie function, when the applicable Cookie function is activated, the level of security can be more improved.
+///
+///        @param enabled Set value for Cookie function.
+///    }
+///    @Tab("Korean") {
+///        Cookie 기능에 대한 검증기능을 활성화 혹은 비활성화시킨다.
+///        Android SDK에서 제공하는 Native용 MediaPlayer를 이용하는 경우 Cookie기능을 제공하지 않은 단말이 있으므로
+///        setCookieChecking은 비활성화 되어야 한다.
+///        만약 Cookie기능이 제공되지 Player에서 재생하게 된다면 재생 중 onError() 콜백메소드가 호출될 것이다.
+///        재생 URL을 재생시킬 플레이어가 HTTP Cookie 기능을 지원한다면 해당 Cookie 기능을 활성화시킨다면 보안성을 더 높일 수 있다.
+///
+///        @param enabled Cookie기능에 대한 설정값.
+///    }
+///}
 -(void) setCookieChecking:(BOOL)enabled;
 
 -(BOOL) setHdmiDetection:(NSString*)path error:(NSError**)error;
 
 -(BOOL) setHdmiDetectionByCID:(NSString*)cid siteID:(NSString*)siteID error:(NSError**)error;
 
--(void) enableLog:(BOOL)enabled;
+//-(void) enableLog:(BOOL)enabled;
 
-/**
- * @if KOREA
- * 로컬 웹서버가 실행중인지 알수 있다.
- * @return 실행중이면 YES. 멈춰있다면 NO.
- * @endif
- *
- * @if ENGLISH
- * local web server running check.
- * @return running if YES. stop if NO.
- * @endif
- */
+/// local web server running check.
+/// @return running if YES. stop if NO.
 -(BOOL) isServerAlive;
 
 -(void) setCustomCookieForStreamingPlay:(NSString*)cookie;

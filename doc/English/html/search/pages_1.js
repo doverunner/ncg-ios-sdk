@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['what_27s_20new_20in_20ncg_20ios_0',['What&apos;s New in NCG iOS',['../index.html',1,'']]]
+  ['implementation_20guides_0',['Implementation Guides',['../implementation.html',1,'']]],
+  ['in_20ncg_20ios_1',['What&apos;s New in NCG iOS',['../index.html',1,'']]],
+  ['ios_2',['What&apos;s New in NCG iOS',['../index.html',1,'']]]
 ];

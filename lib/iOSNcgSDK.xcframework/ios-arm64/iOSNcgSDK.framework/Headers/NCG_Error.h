@@ -446,7 +446,7 @@ extern "C" {
 // NCG 기타 에러
 //////////////////////////////////////////////////////////////////////
 // 메모리 할당 실패.
-#define    NCGERR_MEMOEY_ALLOCATION_FAIL    0xF0001001   // -268431359
+#define    NCGERR_MEMORY_ALLOCATION_FAIL    0xF0001001   // -268431359
 
 // 함수 입력 파라미터가 올바르지 않은 경우.
 // OPTIONAL이 아닌 필요한 변수에 NULL 이 입력될 때 주로 발생.

@@ -1,9 +1,10 @@
 var indexSectionsWithContent =
 {
-  0: "acdeghinoprsuw",
+  0: "acdeghilnoprsw",
   1: "nw",
-  2: "acdeghinoprsu",
-  3: "iw"
+  2: "acdeghilnoprs",
+  3: "aceps",
+  4: "ginsw"
 };
 
 var indexSectionNames =
@@ -11,14 +12,16 @@ var indexSectionNames =
   0: "all",
   1: "classes",
   2: "functions",
-  3: "pages"
+  3: "properties",
+  4: "pages"
 };
 
 var indexSectionLabels =
 {
-  0: "All",
-  1: "Classes",
-  2: "Functions",
-  3: "Pages"
+  0: "모두",
+  1: "클래스",
+  2: "함수",
+  3: "속성",
+  4: "페이지들"
 };
 
