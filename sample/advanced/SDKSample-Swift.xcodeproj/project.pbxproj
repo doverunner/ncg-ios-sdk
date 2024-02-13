@@ -52,7 +52,6 @@
 		88DB3CDF20BD28C00012D87C /* NCGDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCGDownload.swift; sourceTree = "<group>"; };
 		88DB3CE220BD79660012D87C /* TableViewController+URLSessionDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableViewController+URLSessionDelegates.swift"; sourceTree = "<group>"; };
 		88DC6E9520C92302006C706F /* Recharbility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recharbility.swift; sourceTree = "<group>"; };
-		C19CCE8727F6FE8D005A085F /* iOSNcgSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iOSNcgSDK.framework; path = ../../lib/iOSNcgSDK.framework; sourceTree = "<group>"; };
 		FC6F63A1261F474700AC54AF /* Accessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accessibility.framework; path = System/Library/Frameworks/Accessibility.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -72,7 +71,6 @@
 		882D253220BB9D070080929C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C19CCE8727F6FE8D005A085F /* iOSNcgSDK.framework */,
 				FC6F63A1261F474700AC54AF /* Accessibility.framework */,
 				88CBAB2621749F360016970A /* libc++.tbd */,
 				88CBAB24217494500016970A /* libc.tbd */,
@@ -390,13 +388,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 22X77ENQ2H;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../lib\"";
+				EXCLUDED_ARCHS = "";
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "SDKSample-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.inka.sample.swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -417,13 +419,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 22X77ENQ2H;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../lib\"";
+				EXCLUDED_ARCHS = "";
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "SDKSample-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inka.sample.swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
