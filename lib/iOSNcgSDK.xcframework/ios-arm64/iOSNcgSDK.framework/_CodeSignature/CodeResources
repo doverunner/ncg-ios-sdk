@@ -34,7 +34,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		/TPOuOpwTP+ZyOnvOdETbqYZtn4=
+		fwQDfEc/PsdfIFlSXS7DDy965ng=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -50,11 +50,15 @@
 		</data>
 		<key>NCG-iOS-SDK.WhatIsNew.html</key>
 		<data>
-		1HiuKBMJrRuOIeyGICOkPvOu0Uk=
+		Aw32NaVzLKE3S0gX5YDOWHOWQD4=
 		</data>
 		<key>NCG-iOS-SDK.WhatIsNew_Eng.html</key>
 		<data>
-		aSC5xWAONPjgg28I9+jPlVWwocY=
+		9NX4XU34MtvjZ7uTJyXlWMpAQqU=
+		</data>
+		<key>PrivacyInfo.xcprivacy</key>
+		<data>
+		37UT8HBNVJnZzjN22yBMNrD7g5w=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -173,22 +177,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1HiuKBMJrRuOIeyGICOkPvOu0Uk=
+			Aw32NaVzLKE3S0gX5YDOWHOWQD4=
 			</data>
 			<key>hash2</key>
 			<data>
-			EQiAn5s0ck5Zx++YwW0QcU2eUgljXE9a2luCtaOXi5E=
+			bvsQq8zyfcSOKDXqluXgSernmrxXjnfoJgzmMLoBTvw=
 			</data>
 		</dict>
 		<key>NCG-iOS-SDK.WhatIsNew_Eng.html</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			aSC5xWAONPjgg28I9+jPlVWwocY=
+			9NX4XU34MtvjZ7uTJyXlWMpAQqU=
 			</data>
 			<key>hash2</key>
 			<data>
-			i7Rrrq1QiHGnuCUqbweTDVGE0/0pssd/GzUHnwR6wAQ=
+			y3BSH9sXydR9Kh/pADPqWyBMjTpjv62qpxWSGDSoBjg=
+			</data>
+		</dict>
+		<key>PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			37UT8HBNVJnZzjN22yBMNrD7g5w=
+			</data>
+			<key>hash2</key>
+			<data>
+			58iEH6epZO39GyL3tCHPNw42lKD5rYZl7Qy8g5x8aRU=
 			</data>
 		</dict>
 	</dict>
