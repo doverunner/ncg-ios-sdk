@@ -21,5 +21,6 @@ var searchData=
   ['getplayverificationmethod_18',['getPlayVerificationMethod',['../interface_ncg2_license_information.html#a960325248c73d554d839d295836477bb',1,'Ncg2LicenseInformation']]],
   ['getresponsemessage_19',['getResponseMessage',['../protocol_ncg_http_request_delegate-p.html#a8995be61910314201b0bbf893dadf435',1,'NcgHttpRequestDelegate-p']]],
   ['getresponsestatus_20',['getResponseStatus',['../protocol_ncg_http_request_delegate-p.html#a3dd84356ef6b6160b596ea763367434d',1,'NcgHttpRequestDelegate-p']]],
-  ['gettokeninfo_3aerror_3a_21',['getTokenInfo:error:',['../interface_ncg2_agent.html#ae222f4a0dd607f9d8da2e3b97c6c4e57',1,'Ncg2Agent']]]
+  ['gettokeninfo_3aerror_3a_21',['getTokenInfo:error:',['../interface_ncg2_agent.html#ae222f4a0dd607f9d8da2e3b97c6c4e57',1,'Ncg2Agent']]],
+  ['guides_22',['Implementation Guides',['../implementation.html',1,'']]]
 ];

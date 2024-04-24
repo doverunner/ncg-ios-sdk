@@ -446,7 +446,7 @@ extern "C" {
 // NCG 기타 에러
 //////////////////////////////////////////////////////////////////////
 // 메모리 할당 실패.
-#define    NCGERR_MEMOEY_ALLOCATION_FAIL    0xF0001001   // -268431359
+#define    NCGERR_MEMORY_ALLOCATION_FAIL    0xF0001001   // -268431359
 
 // 함수 입력 파라미터가 올바르지 않은 경우.
 // OPTIONAL이 아닌 필요한 변수에 NULL 이 입력될 때 주로 발생.
@@ -527,6 +527,9 @@ extern "C" {
 
 // Duration After Use 컨텐츠를 처음으로 재생한 경우에 _ncg_CheckValidate 함수에서 반환할 수 있다.
 #define NCGERR_PLAY_FIRST_DURATION_AFTER_USE        0x01000001   // 16777217
+
+
+#define NCGERR_TOKEN_PARSING_FAIL 0x01000002
 
 // Player status check
 enum {

@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/NCG_Error.h</key>
 		<data>
-		KIVd+qXFaH60qVK5+Miivo4bGCM=
+		HG33OPvL0jhFtAUqCOp7H9clnok=
 		</data>
 		<key>Headers/Ncg2Agent.h</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		fsf8f6sd04xLIECP8aIIUy1+H7E=
+		P1VzMvY2dXbwRdluqhkCboMubDc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -50,11 +50,15 @@
 		</data>
 		<key>NCG-iOS-SDK.WhatIsNew.html</key>
 		<data>
-		CKdNuCc1hqww/ngsltc3zruSlVc=
+		CqtGSExPtz/IH2c4AyIjhphMBtA=
 		</data>
 		<key>NCG-iOS-SDK.WhatIsNew_Eng.html</key>
 		<data>
-		jnNYlN4vWXqfT8niMdy4yH19dfM=
+		nNNjgmEKQEE5057XHnFL3F1AlDQ=
+		</data>
+		<key>PrivacyInfo.xcprivacy</key>
+		<data>
+		3IBrVKzQIO/rt+Sz9L0ixsT33tI=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -63,11 +67,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KIVd+qXFaH60qVK5+Miivo4bGCM=
+			HG33OPvL0jhFtAUqCOp7H9clnok=
 			</data>
 			<key>hash2</key>
 			<data>
-			AL3zELmSN7CIopO2eltrJ2tgc6U4wfTi/taPmHD0WT8=
+			PJX9yJFPooZxpkaQ96Fec0ES9EVltkmMmO8ft+J7E4s=
 			</data>
 		</dict>
 		<key>Headers/Ncg2Agent.h</key>
@@ -173,22 +177,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CKdNuCc1hqww/ngsltc3zruSlVc=
+			CqtGSExPtz/IH2c4AyIjhphMBtA=
 			</data>
 			<key>hash2</key>
 			<data>
-			nRsQZzgJzSqWtHXciX99lRMLXUYo5RrAFF8LJgMhTGM=
+			T0Wec6TtH7bg4ElwERJFEualetuPKdyTB4KCdO/H86s=
 			</data>
 		</dict>
 		<key>NCG-iOS-SDK.WhatIsNew_Eng.html</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			jnNYlN4vWXqfT8niMdy4yH19dfM=
+			nNNjgmEKQEE5057XHnFL3F1AlDQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			LHNIAeTqhIqeuGy6XlMCFYDYu1MvTt6zOuY61l1NjjY=
+			aDrHRV1AIJk4ZiGoNuFEoh6BbKb2ssG/zzkNNw+aVMs=
+			</data>
+		</dict>
+		<key>PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			3IBrVKzQIO/rt+Sz9L0ixsT33tI=
+			</data>
+			<key>hash2</key>
+			<data>
+			mfmiknu5wRQNG7GM0J7wfGJRZACuVdvALqTfzMsARok=
 			</data>
 		</dict>
 	</dict>
