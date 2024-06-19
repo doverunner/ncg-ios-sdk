@@ -46,6 +46,7 @@ struct player : UIViewControllerRepresentable {
             // 6. Playback
             let player = AVPlayer(url: URL(string: playUrl)!)
             playerViewController.player = player
+            player.play()
             return playerViewController
 
         } catch {
