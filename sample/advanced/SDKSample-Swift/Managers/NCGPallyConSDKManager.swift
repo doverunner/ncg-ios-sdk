@@ -179,7 +179,7 @@ class NCGPallyConSDKManager: NSObject {
             }
             if ncgContent.downloaded {
                 // Downloaded Content
-                try localUrl = (pallyconNCGSDK?.getLocalWebServerInstance().addLocalFile(forUrl: ncgContent.url, token: ncgContent.token))!
+                try localUrl = (pallyconNCGSDK?.getLocalWebServerInstance().addLocalFile(forUrl: ncgContent.localPath, token: ncgContent.token))!
             } else if ncgContent.url.hasSuffix("m3u8") || ncgContent.url.hasSuffix("smil") {
                 // HLS Content
                 try localUrl = (pallyconNCGSDK?.getLocalWebServerInstance().addHttpLiveStream(forUrl: ncgContent.url, token: ncgContent.token))!
