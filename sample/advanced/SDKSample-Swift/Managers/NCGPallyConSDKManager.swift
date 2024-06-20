@@ -160,14 +160,11 @@ class NCGPallyConSDKManager: NSObject {
         }
         
         do {
-            if ncgContent.downloaded {
-                return ((((try pallyconNCGSDK?.acquireLicense(byToken: ncgContent.token, isTemporary: isTemporary)) != nil)))
-            }
+            return ((((try pallyconNCGSDK?.acquireLicense(byToken: ncgContent.token, isTemporary: isTemporary)) != nil)))
         } catch {
             print("Error : \(error)")
             return false
         }
-        return false
     }
     
     //
