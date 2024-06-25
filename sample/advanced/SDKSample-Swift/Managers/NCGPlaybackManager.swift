@@ -185,6 +185,17 @@ class NCGPlaybackManager: NSObject {
                 }
             } else {
                 print("license expire or No license or license acqure error...")
+                let alertController = UIAlertController(title: "Error", message: "license expire or No license or license acqure error. \n Do you want to delete the licence?", preferredStyle: .alert)
+                
+                let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.destructive){ (action: UIAlertAction) in
+                    
+                    NCGPallyConSDKManager.sharedManager.removeLicense(ncgContent: ncgContent!)
+                    print("If the licence for the NCG Content ID is stored, it is deleted.")
+                }
+                let close = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
+                alertController.addAction(okAction)
+                alertController.addAction(close)
+                UIApplication.shared.keyWindow?.rootViewController?.present(alertController, animated: true, completion: nil)
                 return
             }
         } else {
