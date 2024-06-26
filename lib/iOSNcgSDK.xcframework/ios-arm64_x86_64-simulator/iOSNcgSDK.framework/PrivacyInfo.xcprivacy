@@ -31,9 +31,18 @@
 	</array>
 	<key>NSPrivacyTracking</key>
 	<false/>
+<<<<<<< HEAD
 	<key>NSPrivacyAccessedAPITypes</key>
 	<array/>
 	<key>NSPrivacyTrackingDomains</key>
 	<array/>
+=======
+	<key>NSPrivacyTrackingDomains</key>
+	<array/>
+	<key>NSPrivacyAccessedAPITypes</key>
+	<array>
+		<dict/>
+	</array>
+>>>>>>> v3.0.x
 </dict>
 </plist>

@@ -6,15 +6,19 @@
 	<dict>
 		<key>Headers/NCG_Error.h</key>
 		<data>
+<<<<<<< HEAD
 		HG33OPvL0jhFtAUqCOp7H9clnok=
+=======
+		kI84p+urgiF6hOx7FFllOOtt2Vg=
+>>>>>>> v3.0.x
 		</data>
 		<key>Headers/Ncg2Agent.h</key>
 		<data>
-		OLCLH7GbPO65x52rgJYqMWkAWBQ=
+		7kzQNjN0RoNOu/umSSXRSX1l4ZE=
 		</data>
 		<key>Headers/Ncg2File.h</key>
 		<data>
-		AYyBBUpvLlfwAbhHxClekQesJJ4=
+		BZ7CuPWE9EmNPQIwX4R/HA1PhRk=
 		</data>
 		<key>Headers/Ncg2FileZip.h</key>
 		<data>
@@ -22,11 +26,11 @@
 		</data>
 		<key>Headers/Ncg2SdkCommon.h</key>
 		<data>
-		WuagkDmTMmOUWEFe0y9GQkrgGPI=
+		JMakGGVFoS+HJApKwBmy3ni4Iy8=
 		</data>
 		<key>Headers/Ncg2Webserver.h</key>
 		<data>
-		BgIEqBjuk8qihYMaOXdwEDyzEZA=
+		v2gRY1NuIXdgM1DJwhszg72bwrw=
 		</data>
 		<key>Headers/iOSNcgSDK.h</key>
 		<data>
@@ -34,7 +38,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
+<<<<<<< HEAD
 		P1VzMvY2dXbwRdluqhkCboMubDc=
+=======
+		fwQDfEc/PsdfIFlSXS7DDy965ng=
+>>>>>>> v3.0.x
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -50,6 +58,7 @@
 		</data>
 		<key>NCG-iOS-SDK.WhatIsNew.html</key>
 		<data>
+<<<<<<< HEAD
 		CqtGSExPtz/IH2c4AyIjhphMBtA=
 		</data>
 		<key>NCG-iOS-SDK.WhatIsNew_Eng.html</key>
@@ -59,6 +68,17 @@
 		<key>PrivacyInfo.xcprivacy</key>
 		<data>
 		3IBrVKzQIO/rt+Sz9L0ixsT33tI=
+=======
+		Aw32NaVzLKE3S0gX5YDOWHOWQD4=
+		</data>
+		<key>NCG-iOS-SDK.WhatIsNew_Eng.html</key>
+		<data>
+		9NX4XU34MtvjZ7uTJyXlWMpAQqU=
+		</data>
+		<key>PrivacyInfo.xcprivacy</key>
+		<data>
+		37UT8HBNVJnZzjN22yBMNrD7g5w=
+>>>>>>> v3.0.x
 		</data>
 	</dict>
 	<key>files2</key>
@@ -67,33 +87,41 @@
 		<dict>
 			<key>hash</key>
 			<data>
+<<<<<<< HEAD
 			HG33OPvL0jhFtAUqCOp7H9clnok=
 			</data>
 			<key>hash2</key>
 			<data>
 			PJX9yJFPooZxpkaQ96Fec0ES9EVltkmMmO8ft+J7E4s=
+=======
+			kI84p+urgiF6hOx7FFllOOtt2Vg=
+			</data>
+			<key>hash2</key>
+			<data>
+			fQhqWu6TwVVTJlDOxChVDjIFFqA7dNFF4BvxgAKuHgs=
+>>>>>>> v3.0.x
 			</data>
 		</dict>
 		<key>Headers/Ncg2Agent.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			OLCLH7GbPO65x52rgJYqMWkAWBQ=
+			7kzQNjN0RoNOu/umSSXRSX1l4ZE=
 			</data>
 			<key>hash2</key>
 			<data>
-			p9V9zRAjpKpiGLbjEjzu4b9TRdJ/aMxuYCUaD/UPobE=
+			vHGLu3dL2o4RrOshYO+WKyRu/GpwbibYMDKhbHBgQ60=
 			</data>
 		</dict>
 		<key>Headers/Ncg2File.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			AYyBBUpvLlfwAbhHxClekQesJJ4=
+			BZ7CuPWE9EmNPQIwX4R/HA1PhRk=
 			</data>
 			<key>hash2</key>
 			<data>
-			KEtlECC31ergKzp+hnDbK8GLgiMd+3JIXynXmwNrQb8=
+			azjLWd9Z+za/vdtIyjzxUSaZ+2qBE/53CFFI+LDxa0M=
 			</data>
 		</dict>
 		<key>Headers/Ncg2FileZip.h</key>
@@ -111,22 +139,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			WuagkDmTMmOUWEFe0y9GQkrgGPI=
+			JMakGGVFoS+HJApKwBmy3ni4Iy8=
 			</data>
 			<key>hash2</key>
 			<data>
-			QrSHXjvvRYXU6y6EFP8MqjFflQsdKntT+PaWQrJEFXU=
+			T0pkFKRHegx8Xryfg56VP9CdPiwSrasULouCfFS/0hg=
 			</data>
 		</dict>
 		<key>Headers/Ncg2Webserver.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BgIEqBjuk8qihYMaOXdwEDyzEZA=
+			v2gRY1NuIXdgM1DJwhszg72bwrw=
 			</data>
 			<key>hash2</key>
 			<data>
-			yFL4wMgF6NavsqHrCitHrUCnO+H+939u5D8izjrxiRo=
+			EMw+7mQXnHXuk5OOQWVl03xLJHQZofmzl6w6NYLmvUM=
 			</data>
 		</dict>
 		<key>Headers/iOSNcgSDK.h</key>
@@ -177,33 +205,57 @@
 		<dict>
 			<key>hash</key>
 			<data>
+<<<<<<< HEAD
 			CqtGSExPtz/IH2c4AyIjhphMBtA=
 			</data>
 			<key>hash2</key>
 			<data>
 			T0Wec6TtH7bg4ElwERJFEualetuPKdyTB4KCdO/H86s=
+=======
+			Aw32NaVzLKE3S0gX5YDOWHOWQD4=
+			</data>
+			<key>hash2</key>
+			<data>
+			bvsQq8zyfcSOKDXqluXgSernmrxXjnfoJgzmMLoBTvw=
+>>>>>>> v3.0.x
 			</data>
 		</dict>
 		<key>NCG-iOS-SDK.WhatIsNew_Eng.html</key>
 		<dict>
 			<key>hash</key>
 			<data>
+<<<<<<< HEAD
 			nNNjgmEKQEE5057XHnFL3F1AlDQ=
 			</data>
 			<key>hash2</key>
 			<data>
 			aDrHRV1AIJk4ZiGoNuFEoh6BbKb2ssG/zzkNNw+aVMs=
+=======
+			9NX4XU34MtvjZ7uTJyXlWMpAQqU=
+			</data>
+			<key>hash2</key>
+			<data>
+			y3BSH9sXydR9Kh/pADPqWyBMjTpjv62qpxWSGDSoBjg=
+>>>>>>> v3.0.x
 			</data>
 		</dict>
 		<key>PrivacyInfo.xcprivacy</key>
 		<dict>
 			<key>hash</key>
 			<data>
+<<<<<<< HEAD
 			3IBrVKzQIO/rt+Sz9L0ixsT33tI=
 			</data>
 			<key>hash2</key>
 			<data>
 			mfmiknu5wRQNG7GM0J7wfGJRZACuVdvALqTfzMsARok=
+=======
+			37UT8HBNVJnZzjN22yBMNrD7g5w=
+			</data>
+			<key>hash2</key>
+			<data>
+			58iEH6epZO39GyL3tCHPNw42lKD5rYZl7Qy8g5x8aRU=
+>>>>>>> v3.0.x
 			</data>
 		</dict>
 	</dict>

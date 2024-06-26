@@ -23,6 +23,7 @@ struct NCGContent {
     var downloaded: Bool = false
     var live: Bool = false
     var index: Int
+    var isNcgZip: Bool = false
     
     init(licenseAcquireUrl: String, optionalId: String, token: String, urlAsset: AVURLAsset, url: String, contentName: String) {
         self.licenseAcquireUrl = licenseAcquireUrl
@@ -73,5 +74,6 @@ extension NCGContent {
         static let name = "ContentName"
         static let url = "ContentURL"
         static let licenseAcquireUrl = "LicenseAcquireURL"
+        static let isZip = "IsZip"
     }
 }

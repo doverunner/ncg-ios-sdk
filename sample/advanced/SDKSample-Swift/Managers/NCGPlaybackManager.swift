@@ -154,11 +154,12 @@ class NCGPlaybackManager: NSObject {
     func setNcgContentForPlayback(_ ncgContent: NCGContent?) {
         readyForPlayback = false
         guard ncgContent != nil else {
+            //self.ncgContent = nil
             return
         }
-       
-        self.ncgContent = ncgContent
   
+        self.ncgContent = ncgContent
+
         // 1. NCG Content check
         if NCGPallyConSDKManager.sharedManager.isNcgContent(ncgContent: ncgContent!) {
             // 2. NCG Content license check And acquire license
@@ -184,6 +185,17 @@ class NCGPlaybackManager: NSObject {
                 }
             } else {
                 print("license expire or No license or license acqure error...")
+                let alertController = UIAlertController(title: "Error", message: "license expire or No license or license acqure error. \n Do you want to delete the licence?", preferredStyle: .alert)
+                
+                let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.destructive){ (action: UIAlertAction) in
+                    
+                    NCGPallyConSDKManager.sharedManager.removeLicense(ncgContent: ncgContent!)
+                    print("If the licence for the NCG Content ID is stored, it is deleted.")
+                }
+                let close = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
+                alertController.addAction(okAction)
+                alertController.addAction(close)
+                UIApplication.shared.keyWindow?.rootViewController?.present(alertController, animated: true, completion: nil)
                 return
             }
         } else {
@@ -193,7 +205,6 @@ class NCGPlaybackManager: NSObject {
                 self.ncgContent?.urlAsset = AVURLAsset(url: URL(string: (ncgContent?.localPath)!)!)
             }
         }
-        
     }
     
     @objc func addMovedToBackground() {
@@ -214,8 +225,8 @@ extension NCGPlaybackManager: WebServerDelegate {
             }
         }
     }
-    
-    func onError(_ errorCode: Int32, errorMessage: String!) {
+
+func onError(_ errorCode: Int32, errorMessage: String!) {
         print("Error : (NCGPlaybackManager) \(errorCode), \(String(describing: errorMessage))")
     }
     //

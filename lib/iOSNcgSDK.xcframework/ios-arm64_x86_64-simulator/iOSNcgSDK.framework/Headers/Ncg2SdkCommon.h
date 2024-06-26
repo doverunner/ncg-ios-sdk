@@ -15,26 +15,60 @@
 #define NcgErrorKey_LicenseManagerErrorCode     @"LicenseServerErrorCode"
 #define NcgErrorKey_LicenseManagerErrorMsg      @"LicenseServerErrorMessage"
 
+// ALL < DEBUG < INFO < ERROR < FATAL < OFF
+/*
+# Log Level
+# TRACE : 추적 레벨은 Debug보다 좀더 상세한 정보를 나타냄
+# DEBUG : 프로그램을 디버깅하기 위한 정보 지정
+# INFO :  상태변경과 같은 정보성 메시지를 나타냄
+# WARN :  처리 가능한 문제, 향후 시스템 에러의 원인이 될 수 있는 경고성 메시지를 나타냄
+# ERROR :  요청을 처리하는 중 문제가 발생한 경우
+# FATAL :  아주 심각한 에러가 발생한 상태, 시스템적으로 심각한 문제가 발생해서 어플리케이션 작동이 불가능할 경우
+*/
+
+/// NCG Log Type
+typedef enum NCG_LOG_TYPE: int {
+    /// All log
+    NCG_ALL = 0,
+    /// debug log
+    NCG_DEBUG = 5,
+    /// info log
+    NCG_INFO = 6,
+    /// error log
+    NCG_ERROR = 7,
+    /// fault log
+    NCG_FAULT = 8,
+    /// default value
+    NCG_DEFAULT = 9
+} LogType;
+
 //---------------------------------------------------------------------------------
 // @protocol NcgExceptionalEventDelegate
 //---------------------------------------------------------------------------------
 
+/// Log event delegate
 @protocol NcgExceptionalEventDelegate <NSObject>
 @optional
 
+/// Return log message.
+/// - Parameter logMessage: log message.
 -(void)log:(NSString*)logMessage;
+
+
+/// Return ``Error`` object.
+/// - Parameter error: ``Error``
 -(void)logHandle:(NSError*)error;
+
+
+/// Returns an error message with ``NCG_LOG_TYPE-c.enum``.
+/// - Parameters:
+///   - type: ``NCG_LOG_TYPE-c.enum``.
+///   - message: error message.
+-(void)log:(LogType)type comment:(NSString*)message;
 
 @end
 
-/**
- * @if KOREA
- * Ncg2Agent.initialize 에 전달되는 파라미터 중 오프라인 지원 정책
- * @endif
- *
- * @if ENGLISH
- * @endif
- */
+/// Offline support policy for SDK operation.
 typedef enum _OfflineSupportPolicy
 {
     OfflineSupportNo = 1,
@@ -44,14 +78,8 @@ typedef enum _OfflineSupportPolicy
 //-----------------------------------------------------------------------------
 // LicenseValidation
 //-----------------------------------------------------------------------------
-/**
- * @if KOREA
- * 라이선스 유효성을 나타내기 위한 enum
- * @endif
- *
- * @if ENGLISH
- * @endif
- */
+
+/// Enumeration to indicate the license check result of NCG content
 typedef enum _LicenseValidation
 {
     /**
@@ -184,16 +212,8 @@ typedef enum _LicenseValidation
 //-----------------------------------------------------------------------------
 // @interface Ncg2HeaderInformation
 //-----------------------------------------------------------------------------
-/**
- * @if KOREA
- * NCG 파일헤더 정보 클래스.
- * NCG 파일의 헤더에 기록된 정보를 표현한다.
- * @endif
- *
- * @if ENGLISH
- * NCG file header information class
- * @endif
- */
+
+/// NCG file header information class
 @interface Ncg2HeaderInformation : NSObject
 /**
  * @if KOREA
@@ -272,15 +292,23 @@ typedef enum _LicenseValidation
  */
 -(int) encryptionRange;
 
+/// content id.
 @property(nonatomic, strong) NSString* contentID;
+/// site id.
 @property(nonatomic, strong) NSString* siteID;
+/// acquisition url.
 @property(nonatomic, strong) NSString* acquisitionUrl;
+/// Contents Provider.
 @property(nonatomic, strong) NSString* source;
+/// package date.
 @property(nonatomic, strong) NSString* packDate;
+/// encryption level.
 @property(nonatomic, assign) int encryptionLevel;
+/// encryption range.
 @property(nonatomic, assign) int encryptionRange;
 @end // @interface Ncg2HeaderInformation
 
+/// Output Protection Permission.
 @interface Ncg2LicenseOutputProtectionPermission : NSObject
 
 -(bool) getIsExternalDisplayAllow;              // outputprotection externaldisplay attribute ( 'a' : allow, 'd' : disallow )
@@ -306,98 +334,25 @@ typedef enum _LicenseValidation
 //-----------------------------------------------------------------------------
 // @interface Ncg2LicenseInformation
 //-----------------------------------------------------------------------------
-/**
- * @if KOREA
- * NCG 컨텐츠의 재생권한정보 클래스
- * @endif
- *
- * @if ENGLISH
- * Play rights information class of NCG contents
- * @endif
- */
+
+/// Play rights information class of NCG contents
 @interface Ncg2LicenseInformation : NSObject
-/**
- * @if KOREA
- * 재생가능기간의 시작
- * @endif
- *
- * @if ENGLISH
- * Start date of playable period.
- * @endif
- */
+/// Start date of playable period.
 -(NSString*) getPlayStartDate;
-
-/**
- * @if KOREA
- * 재생가능기간의 끝
- * @endif
- *
- * @if ENGLISH
- * End date of playable period.
- * @endif
- */
+/// End date of playable period.
 -(NSString*) getPlayEndDate;
-
-/**
- * @if KOREA
- * 재생가능기간의 끝
- * @endif
- *
- * @if ENGLISH
- * End date of playable period.
- * @endif
- */
+/// End date of playable period.
 -(long) getPlayFirstDate;
-
-
-/**
- * @if KOREA
- * 검증 모드이다.
- * online, offline 이 될 수 있다.
- * @endif
- *
- * @if ENGLISH
- * It is verification mode. It could be on-line or off-line.
- * @endif
- */
+/// It is verification mode. It could be on-line or off-line.
 -(NSString*) getPlayVerificationMethod;
-
-/**
- * @if KOREA
- * 재생기간 시간값
- * 해당 값이 0이 아니면 처음 재생후 설정된 시간값 만큼 재생이 가능하다.
- * 만약 24라는 값이 존재한다면 처음 재생 후 1일동안 재생이 가능한 컨텐츠인 것이다.
- * @endif
- *
- * @if ENGLISH
- * If the play duration value is not zero(0), it is able to play as much as setting time vale after the first time to play.
- * And if there is 24-hour value, it is the content which is able to play for one day after first time to be played.
- * @endif
- */
+/// If the play duration value is not zero(0), it is able to play as much as setting time vale after the first time to play.
+/// And if there is 24-hour value, it is the content which is able to play for one day after first time to be played.
 -(long) getPlayDurationHour;
-
-/**
- * @if KOREA
- * 전체 재생가능한 횟수
- * @endif
- *
- * @if ENGLISH
- * Play total count
- * @endif
- */
+/// Play total count
 -(long) getPlayTotalCount;
-
-/**
- * @if KOREA
- * 현재 남은 재생가능한 횟수.
- * @endif
- *
- * @if ENGLISH
- * Play remained current count.
- * @endif
- */
+/// Play remained current count.
 -(long) getPlayRemainCount;
-
+/// Output protection permission
 -(Ncg2LicenseOutputProtectionPermission *) getOutputProtectionPermission;
 
 @property(nonatomic, strong) NSString* playStartDate;
@@ -411,7 +366,7 @@ typedef enum _LicenseValidation
 
 @end // @interface Ncg2LicenseInformation
 
-
+/// DRM TYPE
 typedef enum _DrmType
 {
     playready = 0,
@@ -420,7 +375,7 @@ typedef enum _DrmType
     ncg = 3
 } DrmType;
 
-
+/// Token Information.
 @interface Ncg2TokenInfo : NSObject
 
 -(NSString*) getContentID;
