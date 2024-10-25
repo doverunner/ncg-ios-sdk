@@ -528,9 +528,6 @@ extern "C" {
 // Duration After Use 컨텐츠를 처음으로 재생한 경우에 _ncg_CheckValidate 함수에서 반환할 수 있다.
 #define NCGERR_PLAY_FIRST_DURATION_AFTER_USE        0x01000001   // 16777217
 
-
-#define NCGERR_TOKEN_PARSING_FAIL 0x01000002
-
 // Player status check
 enum {
     NCGPlayerStatusUnknown = 0x0020,
